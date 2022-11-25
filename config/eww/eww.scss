@@ -1,0 +1,151 @@
+.datetime {
+	background: #1d2021;
+	// background: radial-gradient(#32302f, #1d2021 80%);
+	border-radius: 15px;
+	font-family: Iosevka Extrabold;
+	font-size: 1.2rem;
+	border-bottom: 2px solid #b8bb26;
+
+	.calendar-container {
+		.body {
+			padding: 20px;
+		}
+
+		.caltime {
+			font-family: JetBrains Mono ExtraBold;
+			font-size: 7rem;
+			text-shadow: 1px 0 #d79921, -5px 0 #d79921, 0 -2px #d79921, 0 -2px #d79921,
+               1px 1px #d79921, -1px -1px #d79921, 1px -1px #d79921, -1px 1px #d79921;
+			margin-top: 10px;
+			color: #fabd2f;
+			// color: transparent;
+
+			.caldots {
+				color: #d79921;
+				text-shadow: none;
+			}
+		}
+		
+		.wrapper {
+			padding: 20px;
+			background: radial-gradient(#3c3836, #282828 90%);
+			border-radius: 15px;
+			
+			.monthyear {
+				font-size: 2rem;
+				margin: .5rem 0;
+				color: #8ec07c;
+
+				.monthprev {
+					font-size: 2.5rem;
+				}
+
+				.monthprev:hover {
+					color: #689d6a;
+				}
+
+				.monthnext {
+					font-size: 2.5rem;
+				}
+				
+				.monthnext:hover {
+					color: #689d6a;
+				}
+			}
+
+			.day-names {
+				margin-bottom: 10px;
+				color: #b8bb26;
+				padding: 0 .7rem;
+				padding-top: 1rem;
+				font-weight: bold;
+				font-size: 1.5rem;
+			}
+			
+			calendar {
+				// padding-bottom: 5px;
+				font-size: 1.2rem;
+				padding: .8rem .25rem 0rem;
+				background: #282828;
+				border-radius: 15px;
+				border: none;
+				color: #fbf1c7;
+				// border-bottom: 2px solid #3c3836;
+			}
+
+			calendar:indeterminate {
+				color: #1d2021;
+				font-size: 1.2rem;
+			}
+
+			calendar:selected {
+				// color: #fabd2f;
+				background: #b8bb26;
+				border-radius: 60px;
+			}
+		}
+	}
+}
+
+.player {
+	background: #1d2021;
+	border-radius: 15px;
+	font-family: Iosevka Extrabold;
+	font-size: 1.2rem;
+	border-bottom: 2px solid #b8bb26;
+	color: #b8bb26;
+
+	.player-container {
+		background: radial-gradient(#3c3836, #282828 90%);
+		border-radius: 15px;
+		margin: 20px;
+		padding: 5px;
+
+		.player-image {
+			border-radius: 15px;
+			min-width: 100px;
+			min-height: 100px;
+			background-size: cover;
+			box-shadow: 0 0 10px #363636;
+			color: #1d2021;
+			font-size: 5.7rem;
+		}
+
+		.player-metadata {
+			padding: 0 20px;
+
+			.player-title {
+				font-size: 1.4rem;
+				text-shadow: 0 0 5px black;
+			}
+
+			.player-artist {
+				padding-bottom: 5px;
+				color: #98971a;
+				font-size: 1.0rem;
+				text-shadow: 0 0 5px black;
+			}
+
+			button {
+				font-size: 1.4rem;
+				background: none;
+				border: none;
+				box-shadow: none;
+				text-shadow: none;
+				color: #b8bb26;
+				text-shadow: 0 0 5px;
+				margin-top: 2px;
+			}
+
+			button:hover {
+				color: #98971a;
+			}
+
+			button:active {
+				text-shadow: none;
+			}
+		}
+
+	}
+}
+

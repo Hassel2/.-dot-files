@@ -1,0 +1,253 @@
+* {
+    border: none;
+    font-family: Iosevka Extrabold;
+    font-size: 15px;
+    color: #d3869b;
+    border-radius: 20px;
+
+}
+
+window {
+	/*font-weight: bold;*/
+}
+window#waybar {
+    background: rgba(0, 0, 0, 0);
+	/* background-color: #1d2021; */
+	border-radius: 0px;
+}
+
+#custom-separator {
+	padding: 0px 15px;
+	border-radius: 0;
+	background: #282828;
+}
+
+/*-----module groups----*/
+.modules-right {
+	/* background: #282828; */
+    background: rgba(0, 0, 0, 0);
+	border-radius: 10px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-right: 20px;
+	padding-left: 20px;
+	font-size: 5rem;
+}
+
+#battery {
+	padding: 0 10px;
+	margin: 0 5px;
+	background: #282828;
+	border-radius: 10px;
+	box-shadow: #282828 0px 0px 10px;
+}
+
+#network {
+	padding: 0 10px;
+	margin: 0 5px;
+	background: #282828;
+	border-radius: 10px;
+	box-shadow: #282828 0px 0px 10px;
+}
+
+#language {
+	padding: 0 10px;
+	margin: 0 5px;
+	background: #282828;
+	border-radius: 10px;
+	box-shadow: #282828 0px 0px 10px;
+}
+
+#pulseaudio {
+	padding: 0 10px;
+	margin: 0 5px;
+	background: #282828;
+	border-radius: 10px;
+	box-shadow: #282828 0px 0px 10px;
+}
+
+#clock {
+	padding: 0 10px;
+	margin: 0 5px;
+	background: #282828;
+	border-radius: 10px;
+	box-shadow: #282828 0px 0px 10px;
+}
+
+.modules-left {
+	background: rgba(0, 0, 0, 0);
+	border-radius: 10px;
+	margin-bottom: 20px;
+	margin-top: 10px;
+	margin-left: 20px;
+	/* padding: 0px 20px; */
+}
+
+#custom-spider {
+	padding: 0 10px;
+	margin: 0 5px;
+	background: #282828;
+	border-radius: 10px;
+	box-shadow: #282828 0px 0px 10px;
+}
+
+#cpu {
+	padding: 0 10px;
+	margin: 0 5px;
+	background: #282828;
+	border-radius: 10px;
+	box-shadow: #282828 0px 0px 10px;
+}
+
+#memory {
+	padding: 0 10px;
+	margin: 0 5px;
+	background: #282828;
+	border-radius: 10px;
+	box-shadow: #282828 0px 0px 10px;
+}
+
+#custom-artix {
+	padding: 0 10px;
+	margin: 0 5px;
+	background: #282828;
+	border-radius: 10px;
+	box-shadow: #282828 0px 0px 10px;
+}
+
+/*-----workspaces------*/
+@keyframes current {
+	0%   { 
+		padding: 0px 11px; 
+		background: linear-gradient(#282828 100%, #8EC07C 0%);
+	}
+	25%  { 
+		padding: 0px 13px; 
+		background: linear-gradient(360deg, #8EC07C 25%, #282828 0%);
+	}
+	50%  { 
+		padding: 0px 15px; 
+		background: linear-gradient(360deg, #8EC07C 50%, #282828 0%);
+	}
+	75%  { 
+		padding: 0px 17px; 
+		background: linear-gradient(360deg, #8EC07C 75%, #282828 0%);
+	}
+	100% { 
+		padding: 0px 19px; 
+		background: linear-gradient(360deg, #8EC07C 100%, #282828 0%);
+	}
+}
+
+@keyframes unactive {
+	0%   { 
+		padding: 0px 19px; 
+		background: linear-gradient(360deg, #8EC07C 100%, #282828 0%);
+	}
+	10%  {
+		padding: 0px 17px; 
+		background: linear-gradient(360deg, #8EC07C 75%, #282828 0%);
+	}
+	20%  { 
+		padding: 0px 15px;
+		background: linear-gradient(360deg, #8EC07C 50%, #282828 0%);
+	}
+	30%  { 
+		padding: 0px 13px; 
+		background: linear-gradient(360deg, #8EC07C 25%, #282828 0%);
+	}
+	40% { 
+		padding: 0px 11px; 
+		background: linear-gradient(#282828 100%, #8EC07C 0%);
+	}
+
+	50% { 
+		padding: 0px 11px; 
+		background: linear-gradient(#282828 100%, #8EC07C 0%);
+	}
+
+	60% { 
+		padding: 0px 11px; 
+		background: linear-gradient(360deg, #3C3836 0%, #282828 0%);
+	}
+	70% { 
+		padding: 0px 11px; 
+		background: linear-gradient(360deg, #3C3836 25%, #282828 0%);
+	}
+	80% { 
+		padding: 0px 11px; 
+		background: linear-gradient(360deg, #3C3836 50%, #282828 0%);
+	}
+	90% { 
+		padding: 0px 11px; 
+		background: linear-gradient(360deg, #3C3836 75%, #282828 0%);
+	}
+	100% { 
+		padding: 0px 11px; 
+		background: linear-gradient(360deg, #3C3836 100%, #282828 0%);
+	}
+}
+
+@keyframes unfocus {
+	0%   { 
+		padding: 0px 19px; 
+		background: linear-gradient(360deg, #8EC07C 100%, #282828 0%);
+	}
+	25%  {
+		padding: 0px 17px; 
+		background: linear-gradient(360deg, #8EC07C 75%, #282828 0%);
+	}
+	50%  { 
+		padding: 0px 15px;
+		background: linear-gradient(360deg, #8EC07C 50%, #282828 0%);
+	}
+	75%  { 
+		padding: 0px 13px; 
+		background: linear-gradient(360deg, #8EC07C 25%, #282828 0%);
+	}
+	100% { 
+		padding: 0px 11px; 
+		background: linear-gradient(#282828 100%, #8EC07C 0%);
+	}
+}
+
+.modules-center {
+	background-color: #282828;
+	padding: 10px 30px;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	border-radius: 60px;
+	box-shadow: #282828 0px 0px 10px;
+}
+
+#custom-ws1, #custom-ws2, #custom-ws3, #custom-ws4, #custom-ws5, #custom-ws6, #custom-ws7, #custom-ws8, #custom-ws9 {
+	background: #3C3836;
+	border: 2px solid #3C3836;
+	padding: 0px 11px;
+	margin: 0px 5px;
+	animation-name: unactive;
+	animation-duration: 1s;
+}
+
+#custom-ws1.active, #custom-ws2.active, #custom-ws3.active, #custom-ws4.active, #custom-ws5.active, #custom-ws6.active, #custom-ws7.active, #custom-ws8.active, #custom-ws9.active {
+	background: #282828;
+	border: 2px solid #8EC07C;
+	animation-name: unfocus;
+	animation-duration: 0.5s;
+}
+
+#custom-ws1.current, #custom-ws2.current, #custom-ws3.current, #custom-ws4.current, #custom-ws5.current, #custom-ws6.current, #custom-ws7.current, #custom-ws8.current, #custom-ws9.current {
+	background: #8EC07C;
+	border: 2px solid #8EC07C;
+	animation-name: current;
+	animation-duration: 0.5s;
+	padding: 0px 19px;
+}
+
+/*-----Colors----*/
+/*
+ *rgba(0,85,102,1),#005566 --> Indigo(dye)
+ *rgba(0,43,51,1),#002B33 --> Dark Green 
+ *rgba(0,153,153,1),#009999 --> Persian Green 
+ *
+ */

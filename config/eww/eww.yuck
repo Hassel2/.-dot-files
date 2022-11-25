@@ -1,0 +1,113 @@
+(defwindow datetime
+			:monitor 0
+			:geometry (geometry
+					:x "20"
+					:y "0"
+					:width "500px"
+					:height "500px"
+					:anchor "top left"
+				)
+	(box :class "calendar-container"
+		 :orientation "v"
+		 :height "100%"
+		 :space-evenly "false"
+		(box :halign "center" :class "caltime" :orientation "h" :space-evenly false
+			(box :class "caltext" "${hour}")
+			(box :class "caldots" ":")
+			(box :class "caltext" "${minute}")
+		)
+		(box :class "body"	
+			(box :class "wrapper"
+				 :orientation "v"
+				 :space-evenly "false"
+				 (box :orientation "h" 
+					  :class "monthyear" 
+					  :space-evenly "false"
+					  :halign "center" 
+					(eventbox :class "monthprev" 
+							  :onclick "script/eww_update_date.sh D"
+						"< "
+					)
+					"${month} ${year} "
+					(eventbox :class "monthnext" 
+							  :onclick "script/eww_update_date.sh I"
+						" >"
+					)
+				  )
+				 (box :class "day-names" :orientation "h" :space-evenly "true"
+						(label :text "Su")
+						(label :text "Mo")
+						(label :text "Tu")
+						(label :text "We")
+						(label :text "Th")
+						(label :text "Fr")
+						(label :text "Sa")
+				 )
+				(calendar :show-heading "false" 
+						  :show-day-names false 
+						  :day day 
+						  :month monthd
+						  :year year
+				)
+			)
+		)
+	)
+)
+
+(defpoll hour :interval "1m" `date +%H`)
+(defpoll minute :interval "1m" `date +%M`)
+(defpoll year :interval "1h" `date "+%Y"`)
+(defvar month "")
+(defvar day 0)
+(defvar monthd 0)
+
+
+(defwindow player
+			:monitor 0
+			:geometry (geometry
+					:x "25"
+					:width "400px"
+					:height "150px"
+					:anchor "top right"
+				)
+	(box :class "player-container"
+		 :orientation "h"
+		 :space-evenly "false"
+		 (box :class "player-image"
+			  :style "background-image: url(\"${imgUrl}\")"
+			  :width "100px"
+			  :height "100px"
+			  disk
+		 )
+		 (box :class "player-metadata"
+			:orientation "v"
+			:hexpand true	
+
+			(box :class "player-title"
+				title	
+			)
+			(box :class "player-artist"
+				artist
+			)
+			(box :class "player-buttons"
+				(button :onclick "playerctl previous"
+					""
+				)
+				(button :onclick "playerctl play-pause"
+					playpause
+				)
+				(button :onclick "playerctl next"
+					""
+				)
+			)
+		 )
+	)
+)
+
+(defvar artist "")
+(defvar title "")
+(defvar imgUrl "")
+(defvar disk "")
+(defvar playpause "")
+
+

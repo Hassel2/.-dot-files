@@ -1,0 +1,3 @@
+function screenshot --wraps='grim - | wl-copy && notify-send "Screenshot taken" "Screenshot saved to your clipboad"' --wraps='grim - | wl-copy && wl-paste -n > ~/.temp/shot.png && notify-send "Screenshot taken" "Screenshot saved to your clipboard" -i "$HOME/.temp/shot.png"' --description 'alias screenshot=grim - | wl-copy && wl-paste -n > ~/.temp/shot.png && notify-send "Screenshot taken" "Screenshot saved to your clipboard" -i "$HOME/.temp/shot.png"'
+  grim - | wl-copy && wl-paste -n > ~/.temp/shot.png && notify-send "Screenshot taken" "Screenshot saved to your clipboard" -i "$HOME/.temp/shot.png" $argv; 
+end

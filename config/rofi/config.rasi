@@ -1,0 +1,6 @@
+configuration {
+ modi: "window,drun,ssh,combi";
+ font: "iosevka 10";
+ combi-modi: "window,drun,ssh";
+ }
+@theme "~/.config/rofi/app-launcher.rasi"

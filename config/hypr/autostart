@@ -1,0 +1,14 @@
+#!/bin/bash
+
+pulseaudio --start &
+waybar -c ~/.config/waybar/center-bar &
+
+# when hyprlarnd starts you will see waybar
+# and hyprland logo for a few seconds
+sleep 2
+swaybg -i ~/.wallpapers/gruvbox_seabg.png &
+eww daemon &
+
+dbus-update-activation-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP &
+# pipewire &
+# wireplumber &
