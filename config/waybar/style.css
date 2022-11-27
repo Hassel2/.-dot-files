@@ -35,7 +35,7 @@ window#waybar {
 }
 
 #battery {
-	padding: 0 10px;
+	padding: 5 10px;
 	margin: 0 5px;
 	background: #282828;
 	border-radius: 10px;
