@@ -1,6 +1,8 @@
 call plug#begin()
 	" Colorscheme for red-eyed
-	Plug 'eddyekofo94/gruvbox-flat.nvim'
+	" Plug 'eddyekofo94/gruvbox-flat.nvim'
+	" Plug 'morhetz/gruvbox'
+	Plug 'ellisonleao/gruvbox.nvim'
 	" Bottom statusbar
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
@@ -32,8 +34,12 @@ call plug#begin()
 	Plug 'jiangmiao/auto-pairs'
 	" Different colors for parentheses, quotes, brackets and etc.
 	Plug 'luochen1990/rainbow'
-	" Multi languafe syntax highlightning
-	Plug 'sheerun/vim-polyglot'
+	" Multi language syntax highlightning
+	Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+	" Refactoring with nvim treesitter
+	Plug 'nvim-treesitter/nvim-treesitter-refactor'
+	" Show current context
+	Plug 'nvim-treesitter/nvim-treesitter-context'
 	" Just a tagbar
 	Plug 'majutsushi/tagbar'
 	" Diff visualiser
@@ -108,10 +114,13 @@ let g:rainbow_active = 1
 "workspace
 	let g:workspace_autocreate = 1
 
-" Gruuuvbox colorscheme {
-	set background=dark
-	colorscheme gruvbox-flat
-" }
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+command Huy call SynStack()
 
 lua require "plugins-conf"
 lua require "lsp-conf"
