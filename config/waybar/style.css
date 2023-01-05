@@ -121,17 +121,81 @@ window#waybar {
 		padding: 0px 11px; 
 		background: linear-gradient(#282828 100%, #8EC07C 0%);
 	}
+	5%  { 
+		padding: 0px 13px; 
+		background: linear-gradient(360deg, #8EC07C 5%, #282828 0%);
+	}
+	10%  { 
+		padding: 0px 13px; 
+		background: linear-gradient(360deg, #8EC07C 10%, #282828 0%);
+	}
+	15%  { 
+		padding: 0px 13px; 
+		background: linear-gradient(360deg, #8EC07C 15%, #282828 0%);
+	}
+	20%  { 
+		padding: 0px 13px; 
+		background: linear-gradient(360deg, #8EC07C 20%, #282828 0%);
+	}
 	25%  { 
 		padding: 0px 13px; 
 		background: linear-gradient(360deg, #8EC07C 25%, #282828 0%);
+	}
+	30%  { 
+		padding: 0px 15px; 
+		background: linear-gradient(360deg, #8EC07C 30%, #282828 0%);
+	}
+	35%  { 
+		padding: 0px 15px; 
+		background: linear-gradient(360deg, #8EC07C 35%, #282828 0%);
+	}
+	40%  { 
+		padding: 0px 15px; 
+		background: linear-gradient(360deg, #8EC07C 40%, #282828 0%);
+	}
+	45%  { 
+		padding: 0px 15px; 
+		background: linear-gradient(360deg, #8EC07C 45%, #282828 0%);
 	}
 	50%  { 
 		padding: 0px 15px; 
 		background: linear-gradient(360deg, #8EC07C 50%, #282828 0%);
 	}
+	55%  { 
+		padding: 0px 15px; 
+		background: linear-gradient(360deg, #8EC07C 55%, #282828 0%);
+	}
+	60%  { 
+		padding: 0px 15px; 
+		background: linear-gradient(360deg, #8EC07C 60%, #282828 0%);
+	}
+	65%  { 
+		padding: 0px 15px; 
+		background: linear-gradient(360deg, #8EC07C 65%, #282828 0%);
+	}
+	70%  { 
+		padding: 0px 15px; 
+		background: linear-gradient(360deg, #8EC07C 70%, #282828 0%);
+	}
 	75%  { 
 		padding: 0px 17px; 
 		background: linear-gradient(360deg, #8EC07C 75%, #282828 0%);
+	}
+	80%  { 
+		padding: 0px 15px; 
+		background: linear-gradient(360deg, #8EC07C 80%, #282828 0%);
+	}
+	85%  { 
+		padding: 0px 15px; 
+		background: linear-gradient(360deg, #8EC07C 85%, #282828 0%);
+	}
+	90%  { 
+		padding: 0px 15px; 
+		background: linear-gradient(360deg, #8EC07C 90%, #282828 0%);
+	}
+	95%  { 
+		padding: 0px 15px; 
+		background: linear-gradient(360deg, #8EC07C 95%, #282828 0%);
 	}
 	100% { 
 		padding: 0px 19px; 
@@ -193,17 +257,81 @@ window#waybar {
 		padding: 0px 19px; 
 		background: linear-gradient(360deg, #8EC07C 100%, #282828 0%);
 	}
+	5%   { 
+		padding: 0px 18.75px; 
+		background: linear-gradient(360deg, #8EC07C 95%, #282828 0%);
+	}
+	10%   { 
+		padding: 0px 18.5px; 
+		background: linear-gradient(360deg, #8EC07C 90%, #282828 0%);
+	}
+	15%   { 
+		padding: 0px 18.25px; 
+		background: linear-gradient(360deg, #8EC07C 85%, #282828 0%);
+	}
+	20%   { 
+		padding: 0px 18px; 
+		background: linear-gradient(360deg, #8EC07C 80%, #282828 0%);
+	}
 	25%  {
-		padding: 0px 17px; 
+		padding: 0px 17.75px; 
 		background: linear-gradient(360deg, #8EC07C 75%, #282828 0%);
 	}
+	30%  {
+		padding: 0px 17.5px; 
+		background: linear-gradient(360deg, #8EC07C 60%, #282828 0%);
+	}
+	35%  {
+		padding: 0px 17.25px; 
+		background: linear-gradient(360deg, #8EC07C 65%, #282828 0%);
+	}
+	40%  {
+		padding: 0px 17px; 
+		background: linear-gradient(360deg, #8EC07C 60%, #282828 0%);
+	}
+	45%  {
+		padding: 0px 16.75px; 
+		background: linear-gradient(360deg, #8EC07C 55%, #282828 0%);
+	}
 	50%  { 
-		padding: 0px 15px;
+		padding: 0px 16.5px;
 		background: linear-gradient(360deg, #8EC07C 50%, #282828 0%);
 	}
+	50%  { 
+		padding: 0px 16.25px;
+		background: linear-gradient(360deg, #8EC07C 45%, #282828 0%);
+	}
+	50%  { 
+		padding: 0px 16px;
+		background: linear-gradient(360deg, #8EC07C 40%, #282828 0%);
+	}
+	50%  { 
+		padding: 0px 15.75px;
+		background: linear-gradient(360deg, #8EC07C 35%, #282828 0%);
+	}
+	50%  { 
+		padding: 0px 15.5px;
+		background: linear-gradient(360deg, #8EC07C 30%, #282828 0%);
+	}
 	75%  { 
-		padding: 0px 13px; 
+		padding: 0px 15.25px; 
 		background: linear-gradient(360deg, #8EC07C 25%, #282828 0%);
+	}
+	80%  { 
+		padding: 0px 15px; 
+		background: linear-gradient(360deg, #8EC07C 20%, #282828 0%);
+	}
+	85%  { 
+		padding: 0px 14.75px; 
+		background: linear-gradient(360deg, #8EC07C 15%, #282828 0%);
+	}
+	90%  { 
+		padding: 0px 14.5px; 
+		background: linear-gradient(360deg, #8EC07C 10%, #282828 0%);
+	}
+	95%  { 
+		padding: 0px 14.25px; 
+		background: linear-gradient(360deg, #8EC07C 5%, #282828 0%);
 	}
 	100% { 
 		padding: 0px 11px; 
