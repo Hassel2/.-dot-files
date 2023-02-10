@@ -56,7 +56,7 @@
 		"format-icons": [
 			""
 		],
-		"format-disconnected": "<span color=\"#FABD2F\"><big> </big></span>",
+		"format-disconnected": "<span color=\"#FABD2F\"><big></big></span>",
 		"format": "<span color=\"#8ec07c\"><big>{icon}</big></span>"	
 	},
 
@@ -70,6 +70,11 @@
 	"pulseaudio" : {
 		"format-icons": {
 			"default": [
+				"",
+				"",
+				"",
+			],
+			"speaker": [
 				"",
 				"",
 				"",
