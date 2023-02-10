@@ -19,7 +19,7 @@
 		],
 
 	"custom/spider": {
-		"format": "<span color=\"#b8bb26\"><big></big></span>",
+		"format": "<span color=\"#b8bb26\"><big><big>󱇪</big></big></span>",
 		"on-click": "$HOME/.config/waybar/script/eww_datetime.sh"
 	},
 
@@ -32,16 +32,22 @@
 	},
 
 	"memory": {
-		"format": "<span color=\"#fe9019\"><big>  </big>{used} GiB</span>"
+		"format": "<span color=\"#fe9019\"><big><big>󰍛  </big></big>{used} GiB</span>"
 	},
 
 	"battery": {
 		"format-icons": [
-			"",
-			"",
-			"",
-			"",
-			""
+			"󰂎",
+			"󰁺",
+			"󰁻",
+			"󰁼",
+			"󰁽",
+			"󰁾",
+			"󰁿",
+			"󰂀",
+			"󰂁",
+			"󰂂",
+			"󰁹",
 		],
 		"states": {
 			"critical": 10
@@ -49,7 +55,7 @@
 		"tooltip": "true",
 		"tooltip-format": "{capacity}% left",
 		"format": "<span color=\"#b8bb26\"><big><big>{icon}</big></big></span>",
-		"format-critical": "<span color=\"#fb4934\"><big><big></big></big></span>",
+		"format-critical": "<span color=\"#fb4934\"><big><big>󱟩</big></big></span>",
 	},
 
 	"network": {
@@ -83,7 +89,7 @@
 				""
 			]
 		},
-		"format-muted": "<span color=\"#3c3836\"></span>",
+		"format-muted": "<span color=\"#3c3836\"><big>󰖁</big></span>",
 		"format": "<span color=\"#b8bb26\"><big>{icon}</big></span>"
 	},
 
