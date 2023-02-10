@@ -2,3 +2,13 @@ cp.sh
 config/fish/conf.d/
 config/fish/functions/fish_prompt.1669328808.copy
 config/fish/functions/mine.fish
+config/fish/fish_plugins
+config/fish/functions/40
+config/fish/functions/__bass.py
+config/fish/functions/bass.fish
+config/fish/functions/bitrix.fish
+config/fish/functions/bitrix_cfg.fish
+config/fish/functions/lss.fish
+config/fish/functions/nvm.fish
+config/fish/functions/pacman.fish
+
