@@ -2,8 +2,9 @@ call plug#begin()
 	" Colorscheme for red-eyed
 	" Plug 'eddyekofo94/gruvbox-flat.nvim'
 	" Plug 'morhetz/gruvbox'
-	Plug 'ellisonleao/gruvbox.nvim'
-	" Bottom statusbar
+	" Plug 'ellisonleao/gruvbox.nvim'
+    Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
+    " Bottom statusbar
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 	" Returns you to the place where you were before closing
@@ -63,6 +64,7 @@ call plug#end()
 	set mouse=a
 	set modifiable
 	set nowrap
+	set expandtab
 	set shiftwidth=4
 	set softtabstop=4
 	set tabstop=4

@@ -1,11 +1,11 @@
 {
-	"layer": "top",
+	"layer": "bottom",
 	"position": "top",
 	"height": 46,
 	"spacing": 0,
     "modules-center": ["custom/ws1", "custom/ws2", "custom/ws3", "custom/ws4", "custom/ws5", "custom/ws6", "custom/ws7", "custom/ws8", "custom/ws9", "custom/ws10",],
 	"modules-left": [
-		"custom/spider",
+		// "custom/spider",
 		"cpu",
 		"custom/separator",
 		"memory", 
@@ -24,7 +24,7 @@
 		],
 
 	"custom/spider": {
-		"format": "<span color=\"#b8bb26\"><big>󱇪</big></span>",
+		"format": "<span color=\"#a6e3a1\"><big>󱇪</big></span>",
 		"on-click": "$HOME/.config/waybar/script/eww_datetime.sh"
 	},
 
@@ -33,11 +33,11 @@
 	},
 
 	"cpu": {
-		"format": "<span color=\"#8ec07c\"> {usage}%</span>"
+		"format": "<span color=\"#cdd6f4\"> {usage}%</span>"
 	},
 
 	"memory": {
-		"format": "<span color=\"#fe9019\"><big>󰍛 </big>{used} GiB</span>"
+		"format": "<span color=\"#cdd6f4\"><big>󰍛 </big>{used} GiB</span>"
 	},
 
 	"tray": {
@@ -64,16 +64,17 @@
 		},
 		"tooltip": "true",
 		"tooltip-format": "{capacity}% left",
-		"format": "<span color=\"#b8bb26\"><big>{icon}</big></span>",
-		"format-critical": "<span color=\"#fb4934\"><big>󱟩</big></span>",
+		"format-charging": "<span color=\"#cdd6f4\">󰚥<big>{icon}</big></span>",
+		"format-discharging": "<span color=\"#cdd6f4\">󰚦<big>{icon}</big></span>",
+		"format-critical": "<span color=\"#f38ba8\"><big>󱟩</big></span>",
 	},
 
 	"network": {
 		"format-icons": [
 			""
 		],
-		"format-disconnected": "<span color=\"#FABD2F\"><big></big></span>",
-		"format": "<span color=\"#8ec07c\"><big>{icon}</big></span>"	
+		"format-disconnected": "<span color=\"#f9e2af\"><big></big></span>",
+		"format": "<span color=\"#cdd6f4\"><big>{icon}</big></span>"	
 	},
 
 	"hyprland/language": {
@@ -99,16 +100,16 @@
 				""
 			]
 		},
-		"format-muted": "<span color=\"#3c3836\"><big>󰖁</big></span>",
-		"format": "<span color=\"#b8bb26\"><big>{icon}</big></span>"
+		"format-muted": "<span color=\"#313244\"><big>󰖁</big></span>",
+		"format": "<span color=\"#cdd6f4\"><big>{icon}</big></span>"
 	},
 
 	"clock": {
-		"format": "<span color=\"#fabd2f\">{:%a %b %d %H:%M}</span>",
+		"format": "<span color=\"#cdd6f4\">{:%a %b %d %H:%M}</span>",
 	},
 
 	"custom/separator": {
-		"format": "<span color='#3c3836'>|</span>",
+		"format": "<span color='#313244'>|</span>",
 	},
 
 	// workspaces
