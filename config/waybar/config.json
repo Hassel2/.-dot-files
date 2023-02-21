@@ -1,9 +1,10 @@
 {
 	"layer": "bottom",
+    "output": "eDP-1",
 	"position": "top",
 	"height": 46,
 	"spacing": 0,
-    "modules-center": ["custom/ws1", "custom/ws2", "custom/ws3", "custom/ws4", "custom/ws5", "custom/ws6", "custom/ws7", "custom/ws8", "custom/ws9", "custom/ws10",],
+    "modules-center": ["custom/workspaces"],
 	"modules-left": [
 		// "custom/spider",
 		"cpu",
@@ -112,86 +113,11 @@
 		"format": "<span color='#313244'>|</span>",
 	},
 
-	// workspaces
-	"custom/ws1": {
-		"exec": "$HOME/.config/waybar/script/workspaces.sh 1",
+    "custom/workspaces": {
+		"exec": "$HOME/.config/waybar/script/workspaces.sh",
 		"return-type": "json",
 		"interval": "once",
 		"format": "{}",
-		"on-click": "hyprctl dispatch workspace 1 && pkill -RTMIN+8 waybar",
 		"signal": 8,
-	},
-	"custom/ws2": {
-		"exec": "$HOME/.config/waybar/script/workspaces.sh 2",
-		"return-type": "json",
-		"interval": "once",
-		"format": "{}",
-		"on-click": "hyprctl dispatch workspace 2 && pkill -RTMIN+8 waybar",
-		"signal": 8
-	},
-	"custom/ws3": {
-		"exec": "$HOME/.config/waybar/script/workspaces.sh 3",
-		"return-type": "json",
-		"interval": "once",
-		"format": "{}",
-		"on-click": "hyprctl dispatch workspace 3 && pkill -RTMIN+8 waybar",
-		"signal": 8
-	},
-	"custom/ws4": {
-		"exec": "$HOME/.config/waybar/script/workspaces.sh 4",
-		"return-type": "json",
-		"interval": "once",
-		"format": "{}",
-		"on-click": "hyprctl dispatch workspace 4 && pkill -RTMIN+8 waybar",
-		"signal": 8
-	},
-	"custom/ws5": {
-		"exec": "$HOME/.config/waybar/script/workspaces.sh 5",
-		"return-type": "json",
-		"interval": "once",
-		"format": "{}",
-		"on-click": "hyprctl dispatch workspace 5 && pkill -RTMIN+8 waybar",
-		"signal": 8
-	},
-	"custom/ws6": {
-		"exec": "$HOME/.config/waybar/script/workspaces.sh 6",
-		"return-type": "json",
-		"interval": "once",
-		"format": "{}",
-		"on-click": "hyprctl dispatch workspace 6 && pkill -RTMIN+8 waybar",
-		"signal": 8
-	},
-	"custom/ws7": {
-		"exec": "$HOME/.config/waybar/script/workspaces.sh 7",
-		"return-type": "json",
-		"interval": "once",
-		"format": "{}",
-		"on-click": "hyprctl dispatch workspace 7 && pkill -RTMIN+8 waybar",
-		"signal": 8
-	},
-	"custom/ws8": {
-		"exec": "$HOME/.config/waybar/script/workspaces.sh 8",
-		"return-type": "json",
-		"interval": "once",
-		"format": "{}",
-		"on-click": "hyprctl dispatch workspace 8 && pkill -RTMIN+8 waybar",
-		"signal": 8
-	},
-	"custom/ws9": {
-		"exec": "$HOME/.config/waybar/script/workspaces.sh 9",
-		"return-type": "json",
-		"interval": "once",
-		"format": "{}",
-		"on-click": "hyprctl dispatch workspace 9 && pkill -RTMIN+8 waybar",
-		"signal": 8
-	},
-	"custom/ws10": {
-		"exec": "$HOME/.config/waybar/script/workspaces.sh 10",
-		"return-type": "json",
-		"interval": "once",
-		"format": "{}",
-		"on-click": "hyprctl dispatch workspace 10 && pkill -RTMIN+8 waybar",
-		"signal": 8
-	},
-	// end of workspaces
+    },
 }

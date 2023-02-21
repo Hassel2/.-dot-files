@@ -1,21 +1,21 @@
 #!/bin/bash
-
 active=($( hyprctl workspaces -j | jq .[].id ));
 current=($( hyprctl monitors -j | jq .[].activeWorkspace.id ))
 
+workspaces='{"text":"'
 
-if [[ " ${current[*]} " =~ " ${1} " ]]; then
-	workspaces=$workspaces'{"text":"<span color=\"#cdd6f4\"></span>",'
-	workspaces=$workspaces'"class":"current"'
-elif [[ " ${active[*]} " =~ " ${1} " ]]; then
-	workspaces=$workspaces'{"text":"<span color=\"#cdd6f4\"></span>",'
-	workspaces=$workspaces'"class":"active"'
-else
-	workspaces=$workspaces'{"text":"<span color=\"#313244\"></span>",'
-	workspaces=$workspaces'"class":"unactive"'
-fi;
+for (( i=1; i<=10; i++ )) do
+    workspaces=$workspaces'<span color=\"#1e1e2e\">.</span>'
+    if [[ " ${current[*]} " =~ " ${i} " ]]; then
+        workspaces=$workspaces'<span color=\"#cdd6f4\"><big></big></span>'
+    elif [[ " ${active[*]} " =~ " ${i} " ]]; then
+        workspaces=$workspaces'<span color=\"#cdd6f4\"><big></big></span>'
+    else
+        workspaces=$workspaces'<span color=\"#313244\"><big></big></span>'
+    fi;
+    workspaces=$workspaces'<span color=\"#1e1e2e\">.</span>'
+done;
 
-workspaces=$workspaces'}'
+workspaces=$workspaces'"}'
 
 echo $workspaces 
-
