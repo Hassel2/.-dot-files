@@ -39,6 +39,14 @@ local servers = {
 		end,
 		autostart = true,
 	},
+    -- haskell
+    hls = {
+        filetype = { "hs" },
+        root_dir = function()
+            return vim.fn.getcwd()
+        end,
+        autostart = true,
+    },
 }
 
 return servers
