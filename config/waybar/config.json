@@ -1,6 +1,6 @@
 {
-	"layer": "bottom",
-    "output": "eDP-1",
+	"layer": "top",
+    // "output": "eDP-1",
 	"position": "top",
 	"height": 46,
 	"spacing": 0,
@@ -71,9 +71,13 @@
 	},
 
 	"network": {
-		"format-icons": [
-			""
-		],
+		"format-icons": {
+			"wifi": "",
+			"ethernet": "󰈀"
+        },
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
+        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-disconnected": "Disconnected",
 		"format-disconnected": "<span color=\"#f9e2af\"><big></big></span>",
 		"format": "<span color=\"#cdd6f4\"><big>{icon}</big></span>"	
 	},
