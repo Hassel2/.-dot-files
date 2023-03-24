@@ -1,5 +1,4 @@
--- local servers = { 'ccls', 'gopls', 'cssls', 'html', 'rust_analyzer', 'pyright', 'tsserver', 'flow', 'intelephense', 'csharp_ls'}
-local servers = {
+return {
 	-- python
 	pyright = {},
     -- c/c++
@@ -48,5 +47,3 @@ local servers = {
         autostart = true,
     },
 }
-
-return servers

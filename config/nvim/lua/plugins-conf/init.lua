@@ -1,8 +1,0 @@
-require("plugins-conf.cmp")
-require("plugins-conf.nvim-tree")
-require("plugins-conf.intend-guides")
-require("plugins-conf.nvim-treesitter")
-require("plugins-conf.nvim-treesitter-refactor")
-require("plugins-conf.nvim-treesitter-context")
--- require("plugins-conf.nvim-treesitter-gruvbox")
-require("plugins-conf.catpuccin")
