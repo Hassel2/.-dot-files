@@ -19,7 +19,8 @@
 		"custom/separator",
 		"hyprland/language",
 		"custom/separator",
-		"pulseaudio",
+		// "pulseaudio",
+        "wireplumber",
 		"custom/separator",
 		"clock"
 		],
@@ -107,6 +108,16 @@
 		},
 		"format-muted": "<span color=\"#313244\"><big>󰖁</big></span>",
 		"format": "<span color=\"#cdd6f4\"><big>{icon}</big></span>"
+	},
+
+	"wireplumber" : {
+		"format-icons": [
+            "",
+            "",
+            "",
+		],
+		"format": "<span color=\"#cdd6f4\"><big>{icon}</big></span>",
+		"format-muted": "<span color=\"#313244\"><big>󰖁</big></span>"
 	},
 
 	"clock": {
