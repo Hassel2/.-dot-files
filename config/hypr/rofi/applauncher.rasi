@@ -11,78 +11,86 @@
 configuration {
 	modi:                       "drun";
     show-icons:                 true;
-    display-drun:               "";
-	drun-display-format:        "{name}";
 }
 
 /*****----- Global Properties -----*****/
-@import                          "colors.rasi"
-@import                          "fonts.rasi"
+* {
+    font:                        "Iosevka Extrabold 12";
+    background:                  #1E1E2E;
+    background-alt:              #313244;
+    foreground:                  #CDD6F4;
+    selected:                    #CBA6F7;
+    active:                      #00CCF5;
+    urgent:                      #8D0083;
+}
 
 /*****----- Main Window -----*****/
 window {
-    /* transparency:                "background"; */
-    background-image:            url("~/.temp/rofi_copy.png");
+    /* properties for window widget */
+    transparency:                "real";
     location:                    center;
     anchor:                      center;
-    fullscreen:                  true;
-    width:                       1366px;
-    height:                      1080px;
+    fullscreen:                  false;
+    width:                       1000px;
     x-offset:                    0px;
     y-offset:                    0px;
 
+    /* properties for all widgets */
     enabled:                     true;
-    margin:                      0px;
-    padding:                     0px;
-    border:                      0px solid;
-    border-radius:               0px;
-    border-color:                @selected;
-    background-color:            black / 10%;
+    border-radius:               15px;
     cursor:                      "default";
+    background-color:            @background;
 }
 
 /*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
-    spacing:                     100px;
-    margin:                      0px;
-    padding:                     100px 225px;
-    border:                      0px solid;
-    border-radius:               0px 0px 0px 0px;
-    border-color:                @selected;
+    spacing:                     0px;
     background-color:            transparent;
-    children:                    [ "inputbar", "listview" ];
+    orientation:                 horizontal;
+    children:                    [ "imagebox", "listbox" ];
+}
+
+imagebox {
+    padding:                     20px;
+    background-color:            transparent;
+    background-image:            url("~/.config/hypr/rofi/img/bg.jpg", height);
+    orientation:                 vertical;
+    children:                    [ "inputbar", "dummy" ];
+}
+
+listbox {
+    spacing:                     20px;
+    padding:                     20px;
+    background-color:            transparent;
+    orientation:                 vertical;
+    children:                    [ "message", "listview" ];
+}
+
+dummy {
+    background-color:            transparent;
 }
 
 /*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
     spacing:                     10px;
-    margin:                      0% 28%;
-    padding:                     10px;
-    border:                      1px solid;
-    border-radius:               6px;
-    border-color:                white / 25%;
-    background-color:            white / 5%;
+    padding:                     15px;
+    border-radius:               10px;
+    background-color:            @background-alt;
     text-color:                  @foreground;
-    children:                    [ "prompt", "entry" ];
-}
-
-prompt {
-    enabled:                     true;
-    background-color:            transparent;
-    text-color:                  inherit;
+    children:                    [ "textbox-prompt-colon", "entry" ];
 }
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "::";
-    background-color:            transparent;
+    str:                         "";
+    background-color:            inherit;
     text-color:                  inherit;
 }
 entry {
     enabled:                     true;
-    background-color:            transparent;
+    background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
     placeholder:                 "Search";
@@ -92,8 +100,8 @@ entry {
 /*****----- Listview -----*****/
 listview {
     enabled:                     true;
-    columns:                     7;
-    lines:                       4;
+    columns:                     1;
+    lines:                       8;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;
@@ -102,73 +110,75 @@ listview {
     fixed-height:                true;
     fixed-columns:               true;
     
-    spacing:                     0px;
-    margin:                      0px;
-    padding:                     0px;
-    border:                      0px solid;
-    border-radius:               0px;
-    border-color:                @selected;
+    spacing:                     10px;
     background-color:            transparent;
     text-color:                  @foreground;
     cursor:                      "default";
-}
-scrollbar {
-    handle-width:                5px ;
-    handle-color:                @selected;
-    border-radius:               0px;
-    background-color:            @background-alt;
 }
 
 /*****----- Elements -----*****/
 element {
     enabled:                     true;
     spacing:                     15px;
-    margin:                      0px;
-    padding:                     35px 10px;
-    border:                      0px solid;
-    border-radius:               15px;
-    border-color:                @selected;
+    padding:                     8px;
+    border-radius:               10px;
     background-color:            transparent;
     text-color:                  @foreground;
-    orientation:                 vertical;
     cursor:                      pointer;
 }
 element normal.normal {
-    background-color:            transparent;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+element normal.urgent {
+    background-color:            @urgent;
+    text-color:                  @foreground;
+}
+element normal.active {
+    background-color:            @active;
     text-color:                  @foreground;
 }
 element selected.normal {
-    background-color:            white / 5%;
+    background-color:            @selected;
+    text-color:                  @foreground;
+}
+element selected.urgent {
+    background-color:            @urgent;
+    text-color:                  @foreground;
+}
+element selected.active {
+    background-color:            @urgent;
     text-color:                  @foreground;
 }
 element-icon {
     background-color:            transparent;
     text-color:                  inherit;
-    size:                        72px;
+    size:                        32px;
     cursor:                      inherit;
 }
 element-text {
     background-color:            transparent;
     text-color:                  inherit;
-    highlight:                   inherit;
     cursor:                      inherit;
     vertical-align:              0.5;
-    horizontal-align:            0.5;
+    horizontal-align:            0.0;
 }
 
 /*****----- Message -----*****/
-error-message {
-    padding:                     100px;
-    border:                      0px solid;
-    border-radius:               0px;
-    border-color:                @selected;
-    background-color:            black / 10%;
-    text-color:                  @foreground;
+message {
+    background-color:            transparent;
 }
 textbox {
-    background-color:            transparent;
+    padding:                     15px;
+    border-radius:               10px;
+    background-color:            @background-alt;
     text-color:                  @foreground;
     vertical-align:              0.5;
     horizontal-align:            0.0;
-    highlight:                   none;
+}
+error-message {
+    padding:                     15px;
+    border-radius:               20px;
+    background-color:            @background;
+    text-color:                  @foreground;
 }
