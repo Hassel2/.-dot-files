@@ -23,6 +23,7 @@ in
     newSession = true;
     escapeTime = 0;
     prefix = "M-c";
+    baseIndex = 1;
     extraConfig = ''
       # Move to next and prev windows with Alt+(j/k)
       bind -n M-j previous-window
