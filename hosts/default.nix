@@ -65,4 +65,55 @@ in {
 
   };
 
+  laptop = lib.nixosSystem {
+
+    inherit system;
+    specialArgs = {
+
+      inherit inputs pkgs Hyprland system user location;
+      host = {
+
+        hostName = "nixos";
+
+      };
+
+    };
+    modules = [
+
+      ./laptop
+      ./configuration.nix
+
+      home-manager.nixosModules.home-manager
+      {
+
+        home-manager.useGlobalPkgs = true;
+        home-manager.useUserPackages = true;
+        home-manager.extraSpecialArgs = {
+
+          inherit pkgs user;
+          host = {
+
+            hostName = "nixos";
+
+          };
+
+        };
+        home-manager.users.${user} = {
+
+          imports = [
+
+            ./home.nix
+            ./laptop/home.nix
+            ../config
+
+          ];
+
+        };
+
+      }
+
+    ];
+
+  };
+
 }

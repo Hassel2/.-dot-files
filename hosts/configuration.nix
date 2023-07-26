@@ -43,7 +43,7 @@
 
   networking = {
 
-    hostName = "vm";
+    hostName = "nixos";
     networkmanager.enable = true;
 
   };
