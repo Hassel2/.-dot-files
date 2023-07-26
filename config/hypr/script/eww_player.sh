@@ -1,4 +1,5 @@
-#!/bin/bash
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p bash
 
 if !(eww close player); then
 	while true; do

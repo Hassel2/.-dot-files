@@ -1,4 +1,5 @@
-#!/bin/bash
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p bash
 
 function handle {
   if [[ ${1:0:9} == "workspace" ]]; then

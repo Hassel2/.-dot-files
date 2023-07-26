@@ -1,3 +1,6 @@
+#! /usr/bin/env nix-shell
+#! nix-shell -i bash -p bash
+
 vol=$(wpctl get-volume @DEFAULT_AUDIO_SINK@)
 if [[ "$vol" != *"MUTED"* ]]; then
     lvl=${vol//Volume: /}
