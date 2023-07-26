@@ -16,6 +16,15 @@
     isNormalUser = true;
     extraGroups = [ "networkmanager" "wheel" ];
     shell = pkgs.fish;
+    packages = with pkgs; [
+        (st.overrideAttrs (oldAttrs: rec {
+            src = fetchTarball {
+                url = "https://github.com/Hassel2/st-custom/archive/master.tar.gz";
+                sha256 = "0dscxhc8rkahqf72313nm71c73xgpyr7bnqbf26lyxniwn3zvryg";
+            };
+            buildInputs = oldAttrs.buildInputs ++ (with super; [ harfbuzz ]);
+        }))
+    ];
 
   };
 
