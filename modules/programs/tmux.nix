@@ -66,10 +66,10 @@ in
       # writing commands inactive
       set-option -g message-command-style bg=${thm_fg},fg=${thm_bg} # bg=fg3, fg=bg1
       # pane number display
-      set-option -g display-panes-active-colour ${thm_fg} #fg2
-      set-option -g display-panes-colour ${thm_bg} #bg1
+      set-option -g display-panes-active-colour '${thm_fg}' #fg2
+      set-option -g display-panes-colour '${thm_bg}' #bg1
       # clock
-      set-window-option -g clock-mode-colour ${thm_blue} #blue
+      set-window-option -g clock-mode-colour '${thm_blue}' #blue
       # bell
       set-window-option -g window-status-bell-style bg=${thm_red},fg=${thm_bg} # bg=red, fg=bg
       # Theme settings mixed with colors (unfortunately, but there is no cleaner way)
