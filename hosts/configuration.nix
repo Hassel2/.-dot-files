@@ -9,6 +9,7 @@
   imports = [
     ../modules/programs/fish.nix
     ../modules/programs/hyprland.nix
+    ../modules/services/pipewire.nix
   ];
 
   users.users.${user} = {
@@ -45,6 +46,7 @@
       git
       killall
       wget
+      jq
 
     ];
 
