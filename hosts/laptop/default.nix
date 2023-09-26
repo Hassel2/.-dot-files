@@ -14,9 +14,9 @@
 
       grub = { 
         
-	enable = true;
-	device = "nodev";
-	efiSupport = true;
+          enable = true;
+          device = "nodev";
+          efiSupport = true;
 	
       };
 
