@@ -14,8 +14,20 @@
 
     packages = with pkgs; [
         btop
-        exa
-        foot
+        bc
+        eza
+        rofi-wayland
+        swaybg
+        socat
+        swappy
+        grim
+        slurp
+        wl-clipboard
+        libnotify
+        swaynotificationcenter
+        ripgrep
+        gnupg
+        pinentry
     ];
 
   };
