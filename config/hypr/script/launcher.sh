@@ -1,4 +1,4 @@
-#! /usr/bin/env nix-shell
+#! /usr/bin/env cached-nix-shell
 #! nix-shell -i bash -p bash
 
 dir="$HOME/.config/hypr/rofi/"
