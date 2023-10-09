@@ -41,6 +41,11 @@ in
       bind -n M-9 select-window -t 9
       bind -n M-0 select-window -t 10
 
+      bind -n M-h select-pane -L 
+      bind -n M-j select-pane -D 
+      bind -n M-k select-pane -U 
+      bind -n M-l select-pane -R 
+
       # Press Alt+n to create a new window
       bind -n M-n new-window
 
