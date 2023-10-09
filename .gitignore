@@ -11,4 +11,5 @@ config/fish/functions/bitrix_cfg.fish
 config/fish/functions/lss.fish
 config/fish/functions/nvm.fish
 config/fish/functions/pacman.fish
-
+auto-save-list
+elpa/
