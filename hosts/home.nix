@@ -5,6 +5,7 @@
   imports =
     (import ../modules/programs) ++
     (import ../modules/services);
+    (import ../modules/windowManagers);
 
   home = {
 
