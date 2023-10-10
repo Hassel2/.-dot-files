@@ -26,20 +26,20 @@
 		],
 
 	"custom/spider": {
-		"format": "<span color=\"#a6e3a1\"><big>󱇪</big></span>",
+		"format": "<span color=\"#A7C080\"><big>󱇪</big></span>",
 		"on-click": "$HOME/.config/waybar/script/eww_datetime.sh"
 	},
 
 	"custom/artix": {
-		"format": "<span color=\"#fabd2f\">BTW I use Artix</span>",
+		"format": "<span color=\"#A7C080\">BTW I use Artix</span>",
 	},
 
 	"cpu": {
-		"format": "<span color=\"#cdd6f4\"> {usage}%</span>"
+		"format": "<span color=\"#A7C080\"> {usage}%</span>"
 	},
 
 	"memory": {
-		"format": "<span color=\"#cdd6f4\"><big>󰍛 </big>{used} GiB</span>"
+		"format": "<span color=\"#A7C080\"><big>󰍛 </big>{used} GiB</span>"
 	},
 
 	"tray": {
@@ -66,9 +66,9 @@
 		},
 		"tooltip": "true",
 		"tooltip-format": "{capacity}% left",
-		"format-charging": "<span color=\"#cdd6f4\">󰚥<big>{icon}</big></span>",
-		"format-discharging": "<span color=\"#cdd6f4\">󰚦<big>{icon}</big></span>",
-		"format-critical": "<span color=\"#f38ba8\"><big>󱟩</big></span>",
+		"format-charging": "<span color=\"#A7C080\">󰚥<big>{icon}</big></span>",
+		"format-discharging": "<span color=\"#A7C080\">󰚦<big>{icon}</big></span>",
+		"format-critical": "<span color=\"#E67E80\"><big>󱟩</big></span>",
 	},
 
 	"network": {
@@ -79,8 +79,8 @@
         "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
         "tooltip-format-ethernet": "{ifname} ",
         "tooltip-format-disconnected": "Disconnected",
-		"format-disconnected": "<span color=\"#f9e2af\"><big></big></span>",
-		"format": "<span color=\"#cdd6f4\"><big>{icon}</big></span>"	
+		"format-disconnected": "<span color=\"#DBBC7F\"><big></big></span>",
+		"format": "<span color=\"#A7C080\"><big>{icon}</big></span>"	
 	},
 
 	"hyprland/language": {
@@ -106,8 +106,8 @@
 				""
 			]
 		},
-		"format-muted": "<span color=\"#313244\"><big>󰖁</big></span>",
-		"format": "<span color=\"#cdd6f4\"><big>{icon}</big></span>"
+		"format-muted": "<span color=\"#A7C080\"><big>󰖁</big></span>",
+		"format": "<span color=\"#56635f\"><big>{icon}</big></span>"
 	},
 
 	"wireplumber" : {
@@ -116,16 +116,16 @@
             "",
             "",
 		],
-		"format": "<span color=\"#cdd6f4\"><big>{icon}</big></span>",
-		"format-muted": "<span color=\"#313244\"><big>󰖁</big></span>"
+		"format": "<span color=\"#A7C080\"><big>{icon}</big></span>",
+		"format-muted": "<span color=\"#56635f\"><big>󰖁</big></span>"
 	},
 
 	"clock": {
-		"format": "<span color=\"#cdd6f4\">{:%a %b %d %H:%M}</span>",
+		"format": "<span color=\"#A7C080\">{:%a %b %d %H:%M}</span>",
 	},
 
 	"custom/separator": {
-		"format": "<span color='#313244'>|</span>",
+		"format": "<span color='#56635f'>|</span>",
 	},
 
     "custom/workspaces": {

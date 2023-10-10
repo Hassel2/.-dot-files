@@ -2,7 +2,7 @@
     border: none;
     font-family: Iosevka Extrabold;
     font-size: 15px;
-    color: #cdd6f4;
+    color: #A7C080;
     border-radius: 20px;
 }
 
@@ -11,7 +11,7 @@ window {
 }
 window#waybar {
     background: rgba(0, 0, 0, 0);
-	background: linear-gradient(#1e1e2e 64%, transparent 0%);
+	background: linear-gradient(#272E33 64%, transparent 0%);
 	border-radius: 0px;
 }
 
@@ -27,7 +27,7 @@ window#waybar {
 	margin-bottom: 20px;
 	margin-right: 20px;
 	font-size: 5rem;
-	border-bottom: 2px solid #cdd6f4;
+	border-bottom: 2px solid #A7C080;
 }
 
 #battery {
@@ -60,7 +60,7 @@ window#waybar {
 	border-radius: 10px;
 	margin-bottom: 20px;
 	margin-left: 20px;
-	border-bottom: 2px solid #cdd6f4;
+	border-bottom: 2px solid #A7C080;
 }
 
 #custom-spider {
@@ -95,6 +95,6 @@ window#waybar {
 	padding: 10px 30px;
 	margin-bottom: 5px;
 	border-radius: 15px;
-	border-top: 2px solid #cdd6f4;
-    background: #1e1e2e;
+	border-top: 2px solid #A7C080;
+    background: #272E33;
 }
