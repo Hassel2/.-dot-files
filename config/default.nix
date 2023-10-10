@@ -18,5 +18,10 @@ in
       source = ./waybar;
       recursive = true;
     };
+
+    file."${cfgPath}/emacs" = {
+      source = ./emacs;
+      recursive = true;
+    };
   };
 }
