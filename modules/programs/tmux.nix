@@ -1,20 +1,12 @@
 { pkgs, ... }:
 let 
-  thm_bg="#313244";
-  thm_bg1="#585b70";
-  thm_bg2="#7f849c";
-  thm_fg="#cdd6f4";
-  thm_cyan="#89dceb";
-  thm_black="#181825";
-  thm_gray="#313244";
-  thm_magenta="#cba6f7";
-  thm_pink="#f5c2e7";
-  thm_red="#f38ba8";
-  thm_green="#a6e3a1";
-  thm_yellow="#f9e2af";
-  thm_blue="#89b4fa";
-  thm_orange="#fab387";
-  thm_black4="#585b70";
+  thm_bg = "#2d353b";
+  thm_bg1 = "#343f44";
+  thm_bg2 = "3d484d";
+  thm_fg = "#a7c080";
+  thm_red = "#e67e80";
+  thm_green = "#a7c080";
+  thm_blue = "#7fbbb3";
 in
 {
   programs.tmux = {
@@ -59,7 +51,7 @@ in
       # default statusbar color
       set-option -g status-style bg=${thm_bg},fg=${thm_fg} # bg=bg1, fg=fg1
       # default window title colors
-      set-window-option -g window-status-style bg=${thm_orange},fg=${thm_bg} # bg=yellow, fg=bg1
+      set-window-option -g window-status-style bg=${thm_green},fg=${thm_bg} # bg=yellow, fg=bg1
       # default window with an activity alert
       set-window-option -g window-status-activity-style bg=${thm_bg},fg=${thm_fg} # bg=bg1, fg=fg3
       # active window title colors
@@ -86,10 +78,10 @@ in
       set-option -g status-right-length "80"
       set-window-option -g window-status-separator ""
 
-      set-option -g status-left "#[bg=${thm_bg2},fg=${thm_fg}] #S #[bg=${thm_bg},fg=${thm_bg2},nobold,noitalics,nounderscore]"
-      set-option -g status-right "#[bg=${thm_bg},fg=${thm_bg1} nobold, nounderscore, noitalics]#[bg=${thm_bg1},fg=${thm_fg}] %Y-%m-%d  %H:%M #[bg=${thm_bg1},fg=${thm_bg2},nobold,noitalics,nounderscore]#[bg=${thm_bg2},fg=${thm_fg}] #h "
+      set-option -g status-left "#[bg=${thm_fg},fg=${thm_bg}] #S #[bg=${thm_bg},fg=${thm_fg},nobold,noitalics,nounderscore]"
+      set-option -g status-right "#[bg=${thm_bg},fg=${thm_bg1} nobold, nounderscore, noitalics]#[bg=${thm_bg1},fg=${thm_fg}] %Y-%m-%d  %H:%M #[bg=${thm_bg1},fg=${thm_bg2},nobold,noitalics,nounderscore]#[bg=${thm_fg},fg=${thm_bg}] #h "
 
-      set-window-option -g window-status-current-format "#[bg=${thm_orange},fg=${thm_bg},nobold,noitalics,nounderscore]#[bg=${thm_orange},fg=${thm_bg}] #I #[bg=${thm_orange},fg=${thm_bg},bold] #W#{?window_zoomed_flag,*Z,} #[bg=${thm_bg},fg=${thm_orange},nobold,noitalics,nounderscore]"
+      set-window-option -g window-status-current-format "#[bg=${thm_green},fg=${thm_bg},nobold,noitalics,nounderscore]#[bg=${thm_green},fg=${thm_bg}] #I #[bg=${thm_green},fg=${thm_bg},bold] #W#{?window_zoomed_flag,*Z,} #[bg=${thm_bg},fg=${thm_green},nobold,noitalics,nounderscore]"
       set-window-option -g window-status-format "#[bg=${thm_bg1},fg=${thm_bg},noitalics]#[bg=${thm_bg1},fg=${thm_fg}] #I #[bg=${thm_bg1},fg=${thm_fg}] #W #[bg=${thm_bg},fg=${thm_bg1},noitalics]"
     '';
   };
