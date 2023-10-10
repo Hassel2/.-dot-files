@@ -21,10 +21,10 @@
     packages = with pkgs; [
         (st.overrideAttrs (oldAttrs: rec {
             src = fetchTarball {
-                url = "https://github.com/Hassel2/st-custom/archive/master.tar.gz";
-                sha256 = "0dscxhc8rkahqf72313nm71c73xgpyr7bnqbf26lyxniwn3zvryg";
+                url = "https://github.com/Hassel2/st-custom/archive/main.tar.gz";
+                sha256 = "0qd59z61hwnn7kxkn9mrdpipaybgls89kyx356jlzflq9sglb06z";
             };
-            buildInputs = oldAttrs.buildInputs ++ (with super; [ harfbuzz ]);
+            buildInputs = oldAttrs.buildInputs ++ [ harfbuzz ];
         }))
     ];
 
