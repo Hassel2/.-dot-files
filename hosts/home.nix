@@ -14,21 +14,37 @@
     stateVersion = "23.05";
 
     packages = with pkgs; [
+        # cli
         btop
         bc
         eza
-        rofi-wayland
-        swaybg
         socat
-        swappy
         grim
         slurp
-        wl-clipboard
-        libnotify
-        swaynotificationcenter
         ripgrep
         gnupg
-        pinentry
+        sshpass
+
+        # desktop
+        libnotify
+        swaynotificationcenter
+        wl-clipboard
+        swappy
+        rofi-wayland
+        swaybg
+        distrobox
+
+        # programming
+        lazygit
+        ## language servers
+        ### Java
+        jdt-language-server
+        ### Yaml
+        yaml-language-server
+        ### Golang
+        gopls
+        ### PHP 
+        nodePackages.intelephense
     ];
 
   };
