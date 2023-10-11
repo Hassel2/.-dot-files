@@ -5,6 +5,7 @@
   imports = [
 
     ./hardware-configuration.nix
+    ./xdg.nix
 
   ];
 
@@ -21,7 +22,6 @@
 
   virtualisation.docker.enable = true;
 
-  };
 
 }
 
