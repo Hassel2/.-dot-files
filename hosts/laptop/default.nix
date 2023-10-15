@@ -6,6 +6,7 @@
 
     ./hardware-configuration.nix
     ./xdg.nix
+    ./nvidia.nix
 
   ];
 
