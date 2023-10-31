@@ -8,7 +8,6 @@
 
   imports = [
     ../modules/programs/fish.nix
-    ../modules/programs/hyprland.nix
     ../modules/programs/gnupg.nix
     ../modules/services/pipewire.nix
   ];

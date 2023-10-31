@@ -1,4 +1,5 @@
 [
     ./awesome.nix
+    ./hyprland.nix
 ]
 
