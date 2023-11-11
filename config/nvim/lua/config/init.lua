@@ -1,12 +1,15 @@
-vim.api.nvim_win_set_option(0, 'number', true)
-vim.api.nvim_win_set_option(0, 'cursorline', true)
-vim.api.nvim_win_set_option(0, 'cc', '80,120')
-vim.api.nvim_set_option('ruler', true)
-vim.api.nvim_set_option('mouse', 'a')
-vim.api.nvim_set_option('encoding', 'UTF-8')
-vim.api.nvim_set_option('wrap', false)
-vim.api.nvim_set_option('modifiable', true)
-vim.api.nvim_set_option('expandtab', true)
-vim.api.nvim_set_option('shiftwidth', 4)
-vim.api.nvim_set_option('softtabstop', 4)
-vim.api.nvim_set_option('tabstop', 4)
+Opt = vim.opt
+
+Opt.mouse = "a"
+Opt.ruler = true
+Opt.encoding = "UTF-8"
+Opt.wrap = false
+Opt.tabstop = 4
+Opt.softtabstop = 0
+Opt.expandtab = true 
+Opt.shiftwidth = 4 
+Opt.smarttab = true
+Opt.autoindent = true
+Opt.cc = "80,120"
+Opt.cursorline = true 
+Opt.number = true
