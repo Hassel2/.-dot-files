@@ -169,8 +169,8 @@
 
             # Volume
             binde = [
-                ",XF86AudioLowerVolume, exec, $HOME/.config/hypr/script/volume.sh -"
-                    ",XF86AudioRaiseVolume, exec, $HOME/.config/hypr/script/volume.sh +"
+                ",XF86AudioLowerVolume, exec, $HOME/dotfiles/config/hypr/script/volume.sh -"
+                ",XF86AudioRaiseVolume, exec, $HOME/dotfiles/config/hypr/script/volume.sh +"
             ];
 
             submap = "resize"; # will start a submap called "resize"
