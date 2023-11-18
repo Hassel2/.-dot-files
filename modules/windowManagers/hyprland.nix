@@ -6,9 +6,13 @@
         enableNvidiaPatches = true;
 
         settings = {
-            exec-once = "waybar -c ~/.config/waybar/config.json";
-            exec-once = "swaybg -i ~/.wallpapers/everforest.png &";
-            exec-once = "$HOME/.config/hypr/script/workspaces.sh";
+            exec-once = [
+                "waybar -c ~/.config/waybar/config.json"
+                "swaybg -i ~/.wallpapers/everforest.png &"
+                "~/dotfiles/config/hypr/script/workspaces.sh"
+            ];
+
+            monitor="eDP-1,1920x1080@60,0x0,1";
 
             input = {
                 kb_layout = "us,ru";
