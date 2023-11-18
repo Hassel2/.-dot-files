@@ -18,18 +18,24 @@
         # gaming
         hmcl
         cataclysm-dda
+        bottles
+        minetest
+        jdk17
 
         # desktop
+        sassc
+        swaylock-effects
+        anytype
         gimp
         libreoffice-fresh
+        wpsoffice
         pinentry-gtk2
         xdragon
         xwayland
         pavucontrol
         light
         polkit
-        libsForQt5.polkit-kde-agent
-        opera
+        pantheon.pantheon-agent-polkit
         vivaldi
         telegram-desktop
         webcord

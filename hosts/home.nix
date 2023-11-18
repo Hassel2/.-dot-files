@@ -24,6 +24,8 @@
         ripgrep
         gnupg
         sshpass
+        dig
+        wireguard-tools
 
         # desktop
         libnotify
@@ -41,6 +43,7 @@
         jdt-language-server
         ### Yaml
         yaml-language-server
+        ansible-language-server
         ### Golang
         gopls
         ### PHP 
