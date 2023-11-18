@@ -93,6 +93,9 @@
                 "center,^(pavucontrol)$"
             ];
 
+            layerrule = "blur,waybar";
+
+            submap = "default";
             "$mainMod" = "SUPER";
 
             bind = [
