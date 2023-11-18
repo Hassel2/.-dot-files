@@ -145,8 +145,8 @@
                 # Scroll through existing workspaces with mainMod + scroll
                 "$mainMod, mouse_down, workspace, e+1"
                 "$mainMod, mouse_up, workspace, e-1"
-
-                "XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+ 
+                ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
                 # Brightness
                 ",XF86MonBrightnessUp, exec, $HOME/.config/hypr/script/brightness.sh -A"
                 ",XF86MonBrightnessDown, exec, $HOME/.config/hypr/script/brightness.sh -U"
