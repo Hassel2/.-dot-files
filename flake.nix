@@ -25,7 +25,7 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, Hyprland, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nvim-nix, ... }:
     let
 
       user = "anton";
@@ -36,7 +36,7 @@
       nixosConfigurations = import ./hosts {
 
         inherit (nixpkgs) lib;
-        inherit inputs nixpkgs home-manager Hyprland user location;
+        inherit inputs nixpkgs home-manager user location;
 
       };
 

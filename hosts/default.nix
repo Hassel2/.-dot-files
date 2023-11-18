@@ -1,4 +1,4 @@
-{ lib, inputs, nixpkgs, home-manager, user, location, Hyprland }:
+{ lib, inputs, nixpkgs, home-manager, user, location }:
 let
 
   system = "x86_64-linux";
@@ -15,17 +15,16 @@ let
 in {
 
   vm = lib.nixosSystem {
-
     inherit system;
+
     specialArgs = {
 
-      inherit inputs pkgs Hyprland system user location;
+      inherit inputs pkgs system user location;
       host = {
 
         hostName = "vm";
 
       };
-
     };
     modules = [
 
@@ -45,7 +44,6 @@ in {
             hostName = "vm";
 
           };
-
         };
         home-manager.users.${user} = {
 
@@ -56,13 +54,9 @@ in {
             ../config
 
           ];
-
         };
-
       }
-
     ];
-
   };
 
   laptop = lib.nixosSystem {
@@ -70,7 +64,7 @@ in {
     inherit system;
     specialArgs = {
 
-      inherit inputs pkgs Hyprland system user location;
+      inherit inputs pkgs system user location;
       host = {
 
         hostName = "nixos";
@@ -96,7 +90,6 @@ in {
             hostName = "nixos";
 
           };
-
         };
         home-manager.users.${user} = {
 
@@ -107,13 +100,8 @@ in {
             ../config
 
           ];
-
         };
-
       }
-
     ];
-
   };
-
 }
