@@ -157,8 +157,6 @@
                 # Screenshots
                 "CTRL,Print,exec,fish -c screenshotarea"
                 ",Print,exec,fish -c screenshot"
-
-                ",escape,submap,reset" # use reset to go back to the global submap
             ];
 
             bindm = [
@@ -172,16 +170,19 @@
                 ",XF86AudioLowerVolume, exec, $HOME/dotfiles/config/hypr/script/volume.sh -"
                 ",XF86AudioRaiseVolume, exec, $HOME/dotfiles/config/hypr/script/volume.sh +"
             ];
-
-            submap = "resize"; # will start a submap called "resize"
-            binde = [
-                ",right,resizeactive,10 0"
-                ",left,resizeactive,-10 0"
-                ",up,resizeactive,0 -10"
-                ",down,resizeactive,0 10"
-            ];
-
-            submap = "reset"; # will reset the submap, meaning end the current one and return to the global one.
         };
+
+        extraConfig = ''
+            submap=resize
+
+            binde=,right,resizeactive,10 0
+            binde=,left,resizeactive,-10 0
+            binde=,up,resizeactive,0 -10
+            binde=,down,resizeactive,0 10
+
+            bind=,escape,submap,reset
+
+            submap=default
+        '';
     };
 }
