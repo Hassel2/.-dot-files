@@ -15,7 +15,8 @@
   users.users.${user} = {
 
     isNormalUser = true;
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [ "qemu-libvirtd" "libvirtd"
+      "networkmanager" "wheel" "docker" "video" ];
     shell = pkgs.fish;
     packages = with pkgs; [
         (st.overrideAttrs (oldAttrs: rec {
