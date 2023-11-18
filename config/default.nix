@@ -9,11 +9,6 @@ in
       recursive = true;
     };
 
-    file."${cfgPath}/hypr" = {
-      source = ./hypr;
-      recursive = true;
-    };
-
     file."${cfgPath}/waybar" = {
       source = ./waybar;
       recursive = true;
