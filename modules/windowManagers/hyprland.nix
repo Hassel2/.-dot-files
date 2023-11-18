@@ -3,6 +3,7 @@
     wayland.windowManager.hyprland = {
         enable = true;
         xwayland.enable = true;
+        enableNvidiaPatches = true;
 
         settings = {
             exec-once = "waybar -c ~/.config/waybar/config.json";
