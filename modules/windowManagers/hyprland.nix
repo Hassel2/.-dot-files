@@ -40,8 +40,6 @@
             };
 
             decoration = {
-                multisample_edges = false;
-
                 rounding = 10;
 
                 blur = {
