@@ -43,7 +43,7 @@
 
     systemPackages = with pkgs; [
 
-      neovim
+      nvim-pkg
       git
       killall
       wget

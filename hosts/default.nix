@@ -7,6 +7,9 @@ let
 
     inherit system;
     config.allowUnfree = true;
+    overlays = [
+      inputs.nvim-nix.overlays.default
+    ];
 
   };
 
