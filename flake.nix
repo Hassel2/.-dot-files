@@ -21,6 +21,8 @@
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
 
+    nvim-nix = {
+      url = "github:Hassel2/nvim-nix";
     };
 
   };
