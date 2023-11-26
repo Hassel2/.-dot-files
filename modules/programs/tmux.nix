@@ -10,6 +10,11 @@ let
 in
 {
   programs.tmux = {
+
+    plugins = with pkgs.tmuxPlugins; [
+      tilish
+    ];
+
     enable = true;
     keyMode = "vi";
     newSession = true;
@@ -17,30 +22,7 @@ in
     prefix = "M-c";
     baseIndex = 1;
     extraConfig = ''
-      # Move to next and prev windows with Alt+(j/k)
-      bind -n M-j previous-window
-      bind -n M-k next-window
-
-      # Press Alt+%window-number% to go to specific window
-      bind -n M-1 select-window -t 1
-      bind -n M-2 select-window -t 2
-      bind -n M-3 select-window -t 3
-      bind -n M-4 select-window -t 4
-      bind -n M-5 select-window -t 5
-      bind -n M-6 select-window -t 6
-      bind -n M-7 select-window -t 7
-      bind -n M-8 select-window -t 8
-      bind -n M-9 select-window -t 9
-      bind -n M-0 select-window -t 10
-
-      bind -n M-h select-pane -L 
-      bind -n M-j select-pane -D 
-      bind -n M-k select-pane -U 
-      bind -n M-l select-pane -R 
-
-      # Press Alt+n to create a new window
-      bind -n M-n new-window
-
+      set -g @tilish-navigator 'on'
 
       # Start windows and panes at 1, not 0
       set -g base-index 1
