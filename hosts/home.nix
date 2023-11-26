@@ -1,4 +1,4 @@
-{ config, lib, pkgs, user, ... }:
+{ config, lib, pkgs, user, inputs, ... }:
 
 {
 
@@ -35,6 +35,7 @@
         rofi-wayland
         swaybg
         distrobox
+        inputs.techmino.packages.x86_64-linux.default
 
         # programming
         lazygit
