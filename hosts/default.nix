@@ -41,7 +41,7 @@ in {
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = {
 
-          inherit pkgs user;
+          inherit pkgs user inputs;
           host = {
 
             hostName = "vm";
@@ -87,7 +87,7 @@ in {
         home-manager.useUserPackages = true;
         home-manager.extraSpecialArgs = {
 
-          inherit pkgs user;
+          inherit pkgs user inputs;
           host = {
 
             hostName = "nixos";
