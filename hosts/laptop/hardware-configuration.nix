@@ -12,6 +12,9 @@
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
+  boot.extraModprobeConfig = ''
+    options hid_apple fnmode=2
+  '';
 
   fileSystems."/" =
     { device = "/dev/disk/by-uuid/42e442db-0be6-4961-b0ca-01138fd2dd8a";
