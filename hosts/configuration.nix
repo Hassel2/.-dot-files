@@ -66,8 +66,9 @@
   services = {
     xserver = {
       enable = true;
-      displayManager.sddm = {
-        enable = true;
+      displayManager = {
+        sddm.enable = true;
+        sessionPackages = [ pkgs.hyprland ];
       };
     };
   };
