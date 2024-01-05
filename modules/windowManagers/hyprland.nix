@@ -65,13 +65,18 @@
             animations = {
                 enabled = true;
 
-                bezier = "myBezier, 0.05, 0.9, 0.1, 1.05";
+                bezier = [
+                    "mycurve,.32,.97,.53,.98"
+                    "overshot,.32,.97,.37,1.16"
+                ];
+
                 animation = [
-                    "windows, 1, 7, myBezier"
-                    "windowsOut, 1, 7, default, popin 80%"
-                    "border, 1, 10, default"
-                    "fade, 1, 7, default"
-                    "workspaces, 1, 5, default, slide"
+                    "windowsMove,1,4,overshot"
+                    "windowsIn,1,3,mycurve"
+                    "windowsOut,1,10,mycurve,popin 80%"
+                    "fadeIn,1,3,mycurve"
+                    "fadeOut,1,3,mycurve"
+                    "workspaces,1,3.5,default,slide"
                 ];
             };
 
