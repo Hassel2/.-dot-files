@@ -20,6 +20,10 @@
       url = "github:Hassel2/nvim-nix";
     };
 
+    hycov = {
+      url = "github:DreamMaoMao/hycov";
+    };
+
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nvim-nix, ... }:
