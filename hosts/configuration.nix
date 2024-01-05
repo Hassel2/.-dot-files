@@ -9,6 +9,7 @@
   imports = [
     ../modules/programs/fish.nix
     ../modules/programs/gnupg.nix
+    ../modules/programs/steam.nix
     ../modules/services/pipewire.nix
   ];
 
