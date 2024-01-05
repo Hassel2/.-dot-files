@@ -4,12 +4,10 @@
 
   home.packages = with pkgs;
     [
-        # emacs
-        emacs
-
         # cli
         zip
         unzip
+        unrar
         cached-nix-shell
         pass
         assh
@@ -20,14 +18,12 @@
         cataclysm-dda
         bottles
         minetest
-        jdk17
+        xonotic
 
         # desktop
-        sassc
         swaylock-effects
         anytype
         gimp
-        libreoffice-fresh
         wpsoffice
         pinentry-gtk2
         xdragon
@@ -39,6 +35,7 @@
         vivaldi
         telegram-desktop
         webcord
+        feh
     ];
 
 }
