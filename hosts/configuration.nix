@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, lib, pkgs, inputs, user, ... }:
+{ config, lib, pkgs, inputs, user, nvim-nix, ... }:
 
 {
 
@@ -41,7 +41,6 @@
   ];
 
   environment = {
-
     systemPackages = with pkgs; [
 
       nvim-pkg
@@ -51,7 +50,6 @@
       jq
 
     ];
-
   };
 
   networking = {
@@ -93,8 +91,6 @@
     };
 
   };
-
-  nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nix.extraOptions = ''
