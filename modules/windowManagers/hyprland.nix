@@ -12,7 +12,14 @@
                 "~/dotfiles/config/hypr/script/workspaces.sh"
             ];
 
-            monitor="eDP-1,1920x1080@60,0x0,1";
+            env = [
+                "WLR_NO_HARDWARE_CURSORS,1"
+            ];
+
+            monitor = [
+                "eDP-1,1920x1080@60,0x0,1"
+                ",preferred,auto,1,mirror,eDP-1"
+            ];
 
             input = {
                 kb_layout = "us,ru";
