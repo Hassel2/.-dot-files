@@ -98,7 +98,13 @@
                 "center,^(pavucontrol)$"
             ];
 
-            layerrule = "blur,waybar";
+            layerrule = [
+                "blur,waybar"
+                "blur,swaync-notification-window"
+                "blur,swaync-control-center"
+                "ignorezero,swaync-notification-window"
+                "ignorezero,swaync-control-center"
+            ];
 
             submap = "default";
             "$mainMod" = "SUPER";
