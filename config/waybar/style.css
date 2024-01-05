@@ -100,3 +100,8 @@ window#waybar {
 #custom-workspaces {
     color: transparent;
 }
+
+#workspaces button {
+    margin: 0;
+    padding: 8px;
+}

@@ -4,7 +4,8 @@
 	"position": "top",
 	"height": 30,
 	"spacing": 0,
-    "modules-center": ["custom/workspaces"],
+    //"modules-center": ["custom/workspaces"],
+    "modules-center": ["hyprland/workspaces"],
 	"modules-left": [
 		// "custom/spider",
 		"cpu",
@@ -120,5 +121,17 @@
     "hyprland/submap": {
         "format": "{}",
         "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "*": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+        },
+        "format": "{icon}",
+        "format-icons": {
+            "active": "<span color=\"#A7C080\"></span>",
+            "persistent": "<span color=\"#A7C080\"></span>",
+            "empty": "<span color=\"#56635f\"></span>"
+        }
     },
 }
