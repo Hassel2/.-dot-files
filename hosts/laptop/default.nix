@@ -1,5 +1,4 @@
 { pkgs, lib, user, ... }:
-
 {
 
   imports = [
@@ -31,7 +30,10 @@
 
   security.polkit.enable = true;
 
-  services.xserver.desktopManager.xfce.enable = true;
+  services = {
+    xserver.desktopManager.xfce.enable = true;
+    logind.lidSwitchExternalPower = "ignore";
+  };
 
 }
 
