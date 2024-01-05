@@ -27,6 +27,7 @@
     waydroid.enable = true;
   };
   boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
+  programs.virt-manager.enable = true;
 
   security.polkit.enable = true;
 
