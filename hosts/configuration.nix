@@ -58,6 +58,8 @@
 
     hostName = "nixos";
     networkmanager.enable = true;
+    search = [ "web-bee.loc" "svc.cluster.local" "betiz.loc" ];
+    firewall.checkReversePath = false;
 
   };
 
