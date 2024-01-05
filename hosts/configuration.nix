@@ -97,6 +97,11 @@
   nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.extraOptions = ''
+    keep-outputs = false
+    keep-derivations = false
+  '';
+
 
   system.stateVersion = "23.05";
 
