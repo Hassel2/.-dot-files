@@ -103,5 +103,5 @@ window#waybar {
 
 #workspaces button {
     margin: 0;
-    padding: 8px;
+    padding: 0 8px; 
 }
