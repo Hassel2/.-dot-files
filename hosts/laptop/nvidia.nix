@@ -1,7 +1,7 @@
 { pkgs, lib, config, ... }:
 
 {
-    services.xserver.videoDrivers = ["nvidia"];
+    services.xserver.videoDrivers = [ "nvidia" ];
 
     hardware = {
         opengl = {
@@ -27,7 +27,7 @@
                 amdgpuBusId = "PCI:5:0:0";
             };
 
-            package = config.boot.kernelPackages.nvidiaPackages.stable;
+            package = config.boot.kernelPackages.nvidiaPackages.latest;
         };
     };
 }
