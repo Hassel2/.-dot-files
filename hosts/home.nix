@@ -25,6 +25,10 @@
         gnupg
         sshpass
         dig
+        k9s
+        fzf
+        vhs
+        ncdu
 
         # desktop
         libnotify
@@ -35,6 +39,7 @@
         swaybg
         distrobox
         inputs.techmino.packages.x86_64-linux.default
+        anydesk
 
         # programming
         lazygit

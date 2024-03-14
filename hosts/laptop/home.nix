@@ -12,20 +12,23 @@
         pass
         assh
         fet-sh
+        corrupter
+        amdctl
+        amdgpu_top
 
         # gaming
         hmcl
-        cataclysm-dda
         bottles
         minetest
         xonotic
+        mangohud
+        protonup-qt
+        gamemode
 
         # desktop
-        swaylock-effects
         anytype
         gimp
         wpsoffice
-        pinentry-gtk2
         xdragon
         xwayland
         pavucontrol
@@ -36,6 +39,11 @@
         telegram-desktop
         webcord
         feh
+        flameshot
+        satty
+        winbox
+        chromium
+        kanshi
     ];
 
 }
