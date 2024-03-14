@@ -8,7 +8,6 @@
             exec-once = [
                 "waybar -c ~/.config/waybar/config.json"
                 "swaybg -i ~/.wallpapers/everforest.png &"
-                "~/dotfiles/config/hypr/script/workspaces.sh"
             ];
 
             env = [
