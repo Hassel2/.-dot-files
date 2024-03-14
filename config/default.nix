@@ -4,19 +4,17 @@ let
 in
 {
   home = {
-    file."${cfgPath}/nvim" = {
-      source = ./nvim;
-      recursive = true;
-    };
-
-    file."${cfgPath}/waybar" = {
-      source = ./waybar;
-      recursive = true;
-    };
-
-    file."${cfgPath}/emacs" = {
-      source = ./emacs;
-      recursive = true;
+    file = {
+      "${cfgPath}/waybar" = {
+        source = ./waybar;
+        recursive = true;
+      };
+      "${cfgPath}/kanshi" = {
+        enable = true;
+        source = ./kanshi;
+        recursive = true;
+        target = ".config/kanshi";
+        };
     };
   };
 }
