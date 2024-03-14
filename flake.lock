@@ -25,11 +25,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1704383912,
-        "narHash": "sha256-Be7O73qoOj/z+4ZCgizdLlu+5BkVvO2KO299goZ9cW8=",
+        "lastModified": 1710062421,
+        "narHash": "sha256-FiCNRfyUgJOLYIokLiFsfI7B+Zn9HDnOzFR3uVr5qsQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "26b8adb300e50efceb51fff6859a1a6ba1ade4f7",
+        "rev": "36f873dfc8e2b6b89936ff3e2b74803d50447e0a",
         "type": "github"
       },
       "original": {
@@ -43,11 +43,11 @@
         "hyprland": "hyprland"
       },
       "locked": {
-        "lastModified": 1704458811,
-        "narHash": "sha256-FLmj2fl3legxo8JeJciwU8WJFxUYIZ9pEYBZXi00a9Y=",
+        "lastModified": 1709043503,
+        "narHash": "sha256-GHrgunfo+UARnf3OgNhdXoNFALRAmQEGhlZ8x5TBvkQ=",
         "owner": "DreamMaoMao",
         "repo": "hycov",
-        "rev": "9420dee65f3e04d0cebf8d65ee5386711652d86b",
+        "rev": "7d48cff8364a7b6ae52a3472ad1dfe01b9f728ae",
         "type": "github"
       },
       "original": {
@@ -123,16 +123,16 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1704194953,
-        "narHash": "sha256-RtDKd8Mynhe5CFnVT8s0/0yqtWFMM9LmCzXv/YKxnq4=",
+        "lastModified": 1710078301,
+        "narHash": "sha256-BQ3v+XPPz5dLiw2AqUEga++yfKRhqJANUqzqNL518pk=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "bd645e8668ec6612439a9ee7e71f7eac4099d4f6",
+        "rev": "73d699a6ff1e83df3fd6c1e60931e13667b8ae14",
         "type": "github"
       },
       "original": {
         "owner": "nixos",
-        "ref": "nixos-unstable",
+        "ref": "nixos-unstable-small",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -175,11 +175,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1701080370,
-        "narHash": "sha256-QYEy9hkUVYAhU95tj2jM6UMd9FPuzdEguydaJgMo6Wg=",
+        "lastModified": 1704825200,
+        "narHash": "sha256-ppxRyJxvVkmxe+CEaMbriP0V4nDAg361n9Gh0ur4dhA=",
         "owner": "Hassel2",
         "repo": "nvim-nix",
-        "rev": "107531400211804c0c723652a8b3f18d860880ff",
+        "rev": "2b31b8acd612a270cc1f4019967aae5acc84b120",
         "type": "github"
       },
       "original": {
