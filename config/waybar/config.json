@@ -2,14 +2,16 @@
 	"layer": "top",
     // "output": "eDP-1",
 	"position": "top",
-	"height": 46,
+	"height": 30,
 	"spacing": 0,
-    "modules-center": ["custom/workspaces"],
+    //"modules-center": ["custom/workspaces"],
+    "modules-center": ["hyprland/workspaces"],
 	"modules-left": [
 		// "custom/spider",
 		"cpu",
 		"custom/separator",
 		"memory", 
+        "hyprland/submap",
 		"tray"
 		],
 	"modules-right": [
@@ -26,20 +28,20 @@
 		],
 
 	"custom/spider": {
-		"format": "<span color=\"#a6e3a1\"><big>󱇪</big></span>",
+		"format": "<span><big>󱇪</big></span>",
 		"on-click": "$HOME/.config/waybar/script/eww_datetime.sh"
 	},
 
 	"custom/artix": {
-		"format": "<span color=\"#fabd2f\">BTW I use Artix</span>",
+		"format": "<span>BTW I use Artix</span>",
 	},
 
 	"cpu": {
-		"format": "<span color=\"#cdd6f4\"> {usage}%</span>"
+		"format": "<span> {usage}%</span>"
 	},
 
 	"memory": {
-		"format": "<span color=\"#cdd6f4\"><big>󰍛 </big>{used} GiB</span>"
+		"format": "<span><big>󰍛 </big>{used} GiB</span>"
 	},
 
 	"tray": {
@@ -66,9 +68,9 @@
 		},
 		"tooltip": "true",
 		"tooltip-format": "{capacity}% left",
-		"format-charging": "<span color=\"#cdd6f4\">󰚥<big>{icon}</big></span>",
-		"format-discharging": "<span color=\"#cdd6f4\">󰚦<big>{icon}</big></span>",
-		"format-critical": "<span color=\"#f38ba8\"><big>󱟩</big></span>",
+		"format-charging": "<span>󰚥<big>{icon}</big></span>",
+		"format-discharging": "<span>󰚦<big>{icon}</big></span>",
+		"format-critical": "<span><big>󱟩</big></span>",
 	},
 
 	"network": {
@@ -79,8 +81,8 @@
         "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
         "tooltip-format-ethernet": "{ifname} ",
         "tooltip-format-disconnected": "Disconnected",
-		"format-disconnected": "<span color=\"#f9e2af\"><big></big></span>",
-		"format": "<span color=\"#cdd6f4\"><big>{icon}</big></span>"	
+		"format-disconnected": "<span color=\"#DBBC7F\"><big></big></span>",
+		"format": "<span><big>{icon}</big></span>"	
 	},
 
 	"hyprland/language": {
@@ -90,42 +92,22 @@
 		"alt": " en"
 	},
 
-	"pulseaudio" : {
-		"format-icons": {
-			"default": [
-				"",
-				"",
-				"",
-			],
-			"speaker": [
-				"",
-				"",
-				"",
-			],
-			"headphone": [
-				""
-			]
-		},
-		"format-muted": "<span color=\"#313244\"><big>󰖁</big></span>",
-		"format": "<span color=\"#cdd6f4\"><big>{icon}</big></span>"
-	},
-
 	"wireplumber" : {
 		"format-icons": [
             "",
             "",
             "",
 		],
-		"format": "<span color=\"#cdd6f4\"><big>{icon}</big></span>",
-		"format-muted": "<span color=\"#313244\"><big>󰖁</big></span>"
+		"format": "<span><big>{icon}</big></span>",
+		"format-muted": "<span color=\"#56635f\"><big>󰖁</big></span>"
 	},
 
 	"clock": {
-		"format": "<span color=\"#cdd6f4\">{:%a %b %d %H:%M}</span>",
+		"format": "<span>{:%a %b %d %H:%M}</span>",
 	},
 
 	"custom/separator": {
-		"format": "<span color='#313244'>|</span>",
+		"format": "<span>|</span>",
 	},
 
     "custom/workspaces": {
@@ -134,5 +116,22 @@
 		"interval": "once",
 		"format": "{}",
 		"signal": 8,
+    },
+
+    "hyprland/submap": {
+        "format": "{}",
+        "tooltip": false
+    },
+
+    "hyprland/workspaces": {
+        "persistent-workspaces": {
+            "*": [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ]
+        },
+        "format": "{icon}",
+        "format-icons": {
+            "active": "<span color=\"#A7C080\"></span>",
+            "persistent": "<span color=\"#A7C080\"></span>",
+            "empty": "<span color=\"#56635f\"></span>"
+        }
     },
 }

@@ -2,7 +2,7 @@
     border: none;
     font-family: Iosevka Extrabold;
     font-size: 15px;
-    color: #cdd6f4;
+    color: #A7C080;
     border-radius: 20px;
 }
 
@@ -10,9 +10,10 @@ window {
 	/*font-weight: bold;*/
 }
 window#waybar {
-    background: rgba(0, 0, 0, 0);
-	background: linear-gradient(#1e1e2e 64%, transparent 0%);
+	background: rgba(39, 46, 51, 0.3);
+    /* background: rgba(242, 239, 223, 0.3); */
 	border-radius: 0px;
+    text-shadow: 2px 2px 5px #1E2326;
 }
 
 #custom-separator {
@@ -24,10 +25,10 @@ window#waybar {
 .modules-right {
     background: rgba(0, 0, 0, 0);
 	border-radius: 10px;
-	margin-bottom: 20px;
+	/* margin-bottom: 20px; */
 	margin-right: 20px;
 	font-size: 5rem;
-	border-bottom: 2px solid #cdd6f4;
+	/* border-bottom: 2px solid #A7C080; */
 }
 
 #battery {
@@ -58,9 +59,9 @@ window#waybar {
 .modules-left {
 	background: rgba(0, 0, 0, 0);
 	border-radius: 10px;
-	margin-bottom: 20px;
+	/* margin-bottom: 20px; */
 	margin-left: 20px;
-	border-bottom: 2px solid #cdd6f4;
+	/* border-bottom: 2px solid #A7C080; */
 }
 
 #custom-spider {
@@ -92,9 +93,15 @@ window#waybar {
 }
 
 .modules-center {
-	padding: 10px 30px;
-	margin-bottom: 5px;
-	border-radius: 15px;
-	border-top: 2px solid #cdd6f4;
-    background: #1e1e2e;
+	/* padding: 0px 30px; */
+    color: transparent;
+}
+
+#custom-workspaces {
+    color: transparent;
+}
+
+#workspaces button {
+    margin: 0;
+    padding: 0 8px; 
 }

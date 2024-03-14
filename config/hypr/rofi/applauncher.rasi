@@ -16,10 +16,11 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "Iosevka Extrabold 12";
-    background:                  #1E1E2E;
-    background-alt:              #313244;
-    foreground:                  #CDD6F4;
-    selected:                    #CBA6F7;
+    background:                  #F2EFDF;
+    background-alt:              #FFFBEF;
+    foreground:                  #272E33;
+    foreground-alt:              #FFFBEF;
+    selected:                    #8DA101;
     active:                      #00CCF5;
     urgent:                      #8D0083;
 }
@@ -54,7 +55,7 @@ mainbox {
 imagebox {
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/.config/hypr/rofi/img/bg.jpg", height);
+    background-image:            url("~/dotfiles/config/hypr/rofi/img/bg.jpg", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy" ];
 }
@@ -84,7 +85,7 @@ inputbar {
 textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
-    str:                         "";
+    str:                         "󱇪";
     background-color:            inherit;
     text-color:                  inherit;
 }
@@ -140,7 +141,7 @@ element normal.active {
 }
 element selected.normal {
     background-color:            @selected;
-    text-color:                  @foreground;
+    text-color:                  @foreground-alt;
 }
 element selected.urgent {
     background-color:            @urgent;
