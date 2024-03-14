@@ -23,7 +23,6 @@
   virtualisation = { 
     docker.enable = true;
     libvirtd.enable = true;
-    waydroid.enable = true;
   };
   boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
   programs.virt-manager.enable = true;
