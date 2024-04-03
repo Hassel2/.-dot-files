@@ -1,2 +1,3 @@
 [
+  ./gammastep.nix
 ]
