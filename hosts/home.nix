@@ -29,6 +29,12 @@
         fzf
         vhs
         ncdu
+        ngrok
+        lf
+        wireguard-tools
+        charm-freeze
+        wireproxy
+        openvpn3
 
         # desktop
         libnotify
@@ -40,9 +46,13 @@
         distrobox
         inputs.techmino.packages.x86_64-linux.default
         anydesk
+        libreoffice
+        freerdp
+        milkytracker
 
         # programming
         lazygit
+        go
     ];
 
   };
