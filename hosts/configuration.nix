@@ -7,18 +7,21 @@
 {
 
   imports = [
-    ../modules/programs/fish.nix
     ../modules/programs/gnupg.nix
     ../modules/programs/steam.nix
     ../modules/services/pipewire.nix
+    ../modules/services/geoclue2.nix
+    ../modules/services/openvpn.nix
   ];
 
+  # programs.fish.enable = true;
   users.users.${user} = {
 
     isNormalUser = true;
     extraGroups = [ "qemu-libvirtd" "libvirtd"
       "networkmanager" "wheel" "docker" "video" ];
     shell = pkgs.fish;
+    ignoreShellProgramCheck = true;
     packages = with pkgs; [
         (st.overrideAttrs (oldAttrs: rec {
             src = fetchTarball {
@@ -56,17 +59,21 @@
 
     hostName = "nixos";
     networkmanager.enable = true;
-    firewall.checkReversePath = false;
-
+    firewall = {
+      allowedUDPPorts = [ 51820 ];
+      allowedTCPPorts = [ 51820 ];
+      checkReversePath = false;
+      logReversePathDrops = true;
+    };
   };
 
   services = {
+    displayManager = {
+      sddm.enable = true;
+      sessionPackages = [ pkgs.hyprland ];
+    };
     xserver = {
       enable = true;
-      displayManager = {
-        sddm.enable = true;
-        sessionPackages = [ pkgs.hyprland ];
-      };
     };
   };
 

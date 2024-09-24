@@ -10,7 +10,6 @@ let
     overlays = [
       inputs.nvim-nix.overlays.default
     ];
-
   };
 
   lib = nixpkgs.lib;
@@ -84,10 +83,10 @@ in {
       {
 
         home-manager.useGlobalPkgs = true;
-        home-manager.useUserPackages = true;
+        home-manager.useUserPackages = false;
         home-manager.extraSpecialArgs = {
 
-          inherit pkgs user inputs;
+          inherit pkgs user system inputs;
           host = {
 
             hostName = "nixos";

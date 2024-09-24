@@ -6,6 +6,7 @@
     ./hardware-configuration.nix
     ./xdg.nix
     ./nvidia.nix
+    ./pci-passthrough.nix
 
   ];
 
@@ -20,12 +21,15 @@
     };
   };
 
+  systemd.enableUnifiedCgroupHierarchy = false;
   virtualisation = { 
-    docker.enable = true;
-    libvirtd.enable = true;
+    docker = {
+      enable = true;
+      enableOnBoot = true;
+      enableNvidia = true;
+    };
+    waydroid.enable = true;
   };
-  boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
-  programs.virt-manager.enable = true;
 
   security.polkit.enable = true;
 
