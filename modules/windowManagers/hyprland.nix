@@ -1,4 +1,8 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
+let
+    mainMod = "SUPER";
+    scriptPath = "/home/anton/dotfiles/config/hypr/script";
+in
 {
     wayland.windowManager.hyprland = {
         enable = true;
@@ -16,7 +20,7 @@
 
             monitor = [
                 "eDP-1,1920x1080@60,0x0,1"
-                ",preferred,auto,1,mirror,eDP-1"
+                "HDMI-A-1,1920x1080@74,auto,1,mirror,eDP-1"    
             ];
 
             input = {
@@ -84,7 +88,7 @@
             };
 
             master = {
-                new_is_master = true;
+                new_status = "master";
             };
 
             gestures = {
@@ -99,6 +103,9 @@
                 "float,^(pavucontrol)$"
                 "size 800 600,^(pavucontrol)$"
                 "center,^(pavucontrol)$"
+
+                "fullscreen,^(com.gabm.satty)$"
+                "animation fade,^(com.gabm.satty)$"
             ];
 
             layerrule = [
@@ -110,81 +117,80 @@
             ];
 
             submap = "default";
-            "$mainMod" = "SUPER";
 
             bind = [
-                "$mainMod_SHIFT, Return, exec, st -e tmux attach-session || st -e tmux new"
-                "$mainMod, Return, exec, st"
-                "$mainMod_SHIFT, Q, killactive," 
-                "$mainMod, M, exec, $HOME/.config/hypr/script/eww_player.sh"
-                "$mainMod, E, exec, dolphin"
-                "$mainMod, S, togglefloating," 
-                "$mainMod, B, exec, killall -SIGUSR1 waybar"
-                "$mainMod_SHIFT, B, exec, killall waybar && waybar -c ~/.config/waybar/config.json"
-                "$mainMod, D, exec, rofi -show drun -theme ~/dotfiles/config/hypr/rofi/applauncher.rasi"
-                "$mainMod, P, pseudo," # dwindle
-                "$mainMod, J, togglesplit," # dwindle
-                "$mainMod, F, fullscreen," # dwindle
+                "${mainMod}_SHIFT, Return, exec, st -e tmux attach-session || st -e tmux new"
+                "${mainMod}, Return, exec, st"
+                "${mainMod}_SHIFT, Q, killactive," 
+                "${mainMod}, M, exec, ${scriptPath}/eww_player.sh"
+                "${mainMod}, E, exec, dolphin"
+                "${mainMod}, S, togglefloating," 
+                "${mainMod}, D, exec, rofi -show drun -theme ~/dotfiles/config/hypr/rofi/applauncher.rasi"
+                "${mainMod}, P, pseudo," # dwindle
+                "${mainMod}, J, togglesplit," # dwindle
+                "${mainMod}, F, fullscreen," # dwindle
 
-                # Move focus with mainMod + arrow keys
-                "$mainMod, left, movefocus, l"
-                "$mainMod, right, movefocus, r"
-                "$mainMod, up, movefocus, u"
-                "$mainMod, down, movefocus, d"
+                # Move focus with mainMod + hjkl
+                "${mainMod}, H, movefocus, l"
+                "${mainMod}, L, movefocus, r"
+                "${mainMod}, K, movefocus, u"
+                "${mainMod}, J, movefocus, d"
 
-                "$mainMod,R,submap,resize" # will switch to a submap called resize
+                "${mainMod},R,submap,resize" # will switch to a submap called resize
                 
                 # Switch workspaces with mainMod + [0-9]
-                "$mainMod, 1, workspace, 1"
-                "$mainMod, 2, workspace, 2"
-                "$mainMod, 3, workspace, 3"
-                "$mainMod, 4, workspace, 4"
-                "$mainMod, 5, workspace, 5"
-                "$mainMod, 6, workspace, 6"
-                "$mainMod, 7, workspace, 7"
-                "$mainMod, 8, workspace, 8"
-                "$mainMod, 9, workspace, 9"
-                "$mainMod, 0, workspace, 10"
+                "${mainMod}, 1, workspace, 1"
+                "${mainMod}, 2, workspace, 2"
+                "${mainMod}, 3, workspace, 3"
+                "${mainMod}, 4, workspace, 4"
+                "${mainMod}, 5, workspace, 5"
+                "${mainMod}, 6, workspace, 6"
+                "${mainMod}, 7, workspace, 7"
+                "${mainMod}, 8, workspace, 8"
+                "${mainMod}, 9, workspace, 9"
+                "${mainMod}, 0, workspace, 10"
 
                 # Move active window to a workspace with mainMod + SHIFT + [0-9]
-                "$mainMod SHIFT, 1, movetoworkspace, 1"
-                "$mainMod SHIFT, 2, movetoworkspace, 2"
-                "$mainMod SHIFT, 3, movetoworkspace, 3"
-                "$mainMod SHIFT, 4, movetoworkspace, 4"
-                "$mainMod SHIFT, 5, movetoworkspace, 5"
-                "$mainMod SHIFT, 6, movetoworkspace, 6"
-                "$mainMod SHIFT, 7, movetoworkspace, 7"
-                "$mainMod SHIFT, 8, movetoworkspace, 8"
-                "$mainMod SHIFT, 9, movetoworkspace, 9"
-                "$mainMod SHIFT, 0, movetoworkspace, 10"
+                "${mainMod} SHIFT, 1, movetoworkspace, 1"
+                "${mainMod} SHIFT, 2, movetoworkspace, 2"
+                "${mainMod} SHIFT, 3, movetoworkspace, 3"
+                "${mainMod} SHIFT, 4, movetoworkspace, 4"
+                "${mainMod} SHIFT, 5, movetoworkspace, 5"
+                "${mainMod} SHIFT, 6, movetoworkspace, 6"
+                "${mainMod} SHIFT, 7, movetoworkspace, 7"
+                "${mainMod} SHIFT, 8, movetoworkspace, 8"
+                "${mainMod} SHIFT, 9, movetoworkspace, 9"
+                "${mainMod} SHIFT, 0, movetoworkspace, 10"
 
                 # Scroll through existing workspaces with mainMod + scroll
-                "$mainMod, mouse_down, workspace, e+1"
-                "$mainMod, mouse_up, workspace, e-1"
+                "${mainMod}, mouse_down, workspace, e+1"
+                "${mainMod}, mouse_up, workspace, e-1"
  
                 ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
                 # Brightness
-                ",XF86MonBrightnessUp, exec, $HOME/.config/hypr/script/brightness.sh -A"
-                ",XF86MonBrightnessDown, exec, $HOME/.config/hypr/script/brightness.sh -U"
+                ",XF86MonBrightnessUp, exec, ${scriptPath}/brightness.sh -A"
+                ",XF86MonBrightnessDown, exec, ${scriptPath}/brightness.sh -U"
+
+                "${mainMod}, B, exec, ${scriptPath}/gammastep.sh"
 
                 # Screen locker
-                "$mainMod, L, exec, swaylock --screenshot --effect-blur 7x5 --indicator-thickness 7"
+                "${mainMod}, L, exec, swaylock --screenshot --effect-blur 7x5 --indicator-thickness 7"
 
                 # Screenshots
-                "CTRL,Print,exec,fish -c screenshotarea"
-                ",Print,exec,fish -c screenshot"
+                "CTRL,Print,exec,grim - | satty --filename - --early-exit --copy-command wl-copy && wl-paste -n > /tmp/shot.png && notify-send 'Screenshot taken' 'Screenshot saved to your clipboard' -i /tmp/shot.png"
+                ",Print,exec,grim - | wl-copy && wl-paste -n > /tmp/shot.png && notify-send 'Screenshot taken' 'Screenshot saved to your clipboard' -i /tmp/shot.png"
             ];
 
             bindm = [
                 # Move/resize windows with mainMod + LMB/RMB and dragging
-                "$mainMod, mouse:272, movewindow"
-                "$mainMod, mouse:273, resizewindow"
+                "${mainMod}, mouse:272, movewindow"
+                "${mainMod}, mouse:273, resizewindow"
             ];
 
             # Volume
             binde = [
-                ",XF86AudioLowerVolume, exec, $HOME/dotfiles/config/hypr/script/volume.sh -"
-                ",XF86AudioRaiseVolume, exec, $HOME/dotfiles/config/hypr/script/volume.sh +"
+                ",XF86AudioLowerVolume, exec, ${scriptPath}/volume.sh -"
+                ",XF86AudioRaiseVolume, exec, ${scriptPath}/volume.sh +"
             ];
         };
 
